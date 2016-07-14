@@ -16,3 +16,9 @@ main = hspec $ do
         it "can create tuples from lists" $ do
             [(x, y) | x <- [1,2,3], y <- [6, 7]] `shouldBe` [(1,6),(1,7),(2,6),(2,7),(3,6),(3,7)]
             [(x, y) | x <- [1,2,3], y <- ['a', 'b']] `shouldBe` [(1,'a'),(1,'b'),(2,'a'),(2,'b'),(3,'a'),(3,'b')]
+        it "finds upper-case letters" $ do
+            [x | x <- "Three Letter Acronym", elem x ['A'..'Z']] `shouldBe` "TLA"
+        it "can be generalized into a function" $ do
+            let f xs = [x | x <- xs, elem x ['A'..'Z']]
+            f "Self Contained Underwater Breating Apparatus" `shouldBe` "SCUBA"
+            f "National Aeronautics and Space Administration" `shouldBe` "NASA"
