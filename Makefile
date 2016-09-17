@@ -5,12 +5,8 @@ THIS_FILE := $(lastword $(MAKEFILE_LIST))
 
 .DEFAULT_GOAL := help
 
-build-db: ## Builds the DB
-	dropdb --if-exists --username $(USER) $(DBNAME)
-	createdb --username $(USER) $(DBNAME)
-
 tests: ## Runs the tests
-	@$(foreach file,$(FILES), runhaskell $(file);)
+	@$(foreach file,$(FILES), runhaskell $(file) -f progress;)
 
 
 .PHONY: help
