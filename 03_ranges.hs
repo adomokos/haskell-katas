@@ -15,3 +15,7 @@ main = hspec $ do
     describe "repeat" $ do
         it "can repeat numbers" $ do
             take 5 (repeat 3) `shouldBe` [3,3,3,3,3]
+    describe "elem" $ do
+        it "can remove non-uppercase letters" $ do
+            let removeNonUppercase st = [ c | c <- st, c `elem` ['A'..'Z'] ]
+            removeNonUppercase "IdontLIKEFROGS" `shouldBe` "ILIKEFROGS"
