@@ -9,7 +9,7 @@ build-db: ## Builds the DB
 	dropdb --if-exists --username $(USER) $(DBNAME)
 	createdb --username $(USER) $(DBNAME)
 
-tests: ## Runs the test
+tests: ## Runs the tests
 	@$(foreach file,$(FILES), runhaskell $(file);)
 
 
