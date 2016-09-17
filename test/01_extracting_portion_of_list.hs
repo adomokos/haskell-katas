@@ -7,7 +7,8 @@ main = hspec $ do
     describe "Extracting portion of list" $ do
         it "takes elements from a list" $ do
             take 7 ['a'..'z'] `shouldBe` "abcdefg"
-            {- [1..10] `shouldBe` [1,2,3] -}
+            pendingWith "Please fix it below"
+            [1..5] `shouldBe` [1,2,3]
             {- (enumFrom 10) `shouldBe` [10,11,12,13,14] -}
         {- it "can drop elements from a list" $ do -}
             {- [1..10] `shouldBe` [6,7,8,9,10] -}
