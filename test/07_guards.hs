@@ -22,7 +22,7 @@ compare' a b
 
 main :: IO()
 main = hspec $ do
-    describe "Guards, Guards!" $ do
+    describe "guards, guards!" $ do
         it "can be considered as a conditional, but easier to read" $ do
             bmiTell 15.2 `shouldBe` "You're underweight, you emo, you!"
             bmiTell 23 `shouldBe` "You're supposedly normal."
