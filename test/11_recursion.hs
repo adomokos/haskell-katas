@@ -40,6 +40,13 @@ myElem a (x:xs)
     | a == x = True
     | otherwise = a `myElem` xs
 
+quicksort :: (Ord a) => [a] -> [a]
+quicksort [] = []
+quicksort (x:xs) =
+    let smallerSorted = quicksort [a | a <- xs, a <= x]
+        biggerSorted = quicksort [a | a <- xs, a > x]
+    in  smallerSorted ++ [x] ++ biggerSorted
+
 main :: IO()
 main = hspec $ do
     describe "Recursion" $ do
@@ -57,3 +64,6 @@ main = hspec $ do
             zip' [1,2,3] ['a','b'] `shouldBe` [(1,'a'),(2,'b')]
         it "can check if an item is an element of a list" $ do
             myElem 3 [1,2,3] `shouldBe` True
+        it "can do QuickSort - easily" $ do
+            quicksort [3,1,2] `shouldBe` [1,2,3]
+            quicksort "attila" `shouldBe` "aailtt"
