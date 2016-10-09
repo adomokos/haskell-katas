@@ -67,4 +67,7 @@ main = hspec $ do
             {- it it's odd, multiply by 3 and add 1 to it -}
             chain 1 `shouldBe` [1]
             chain 10 `shouldBe` [10,5,16,8,4,2,1]
+        it "can count long chains with lambda" $ do
+            let numLongChains = length (filter (\xs -> length xs > 15) (map chain [1..100]))
+            numLongChains `shouldBe` 66
 
