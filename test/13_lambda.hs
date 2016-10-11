@@ -2,6 +2,9 @@ import Test.Hspec
 import Test.QuickCheck
 import Control.Exception (evaluate)
 
+flip' (a -> b -> c) -> b -> a -> c
+flip' f = \x y -> f y x
+
 main :: IO()
 main = hspec $ do
     describe "Lambdas" $ do
@@ -14,3 +17,5 @@ main = hspec $ do
         it "can pattern match in lambdas" $ do
             map (\(a,b) -> a + b) [(1,2),(3,4),(5,6)]
                 `shouldBe` [3,7,11]
+        it "can make flip more expressive" $ do
+            flip' (-) 5 3 `shouldBe` -2
