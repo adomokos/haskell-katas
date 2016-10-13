@@ -2,7 +2,7 @@ import Test.Hspec
 import Test.QuickCheck
 import Control.Exception (evaluate)
 
-flip' (a -> b -> c) -> b -> a -> c
+flip' :: (a -> b -> c) -> b -> a -> c
 flip' f = \x y -> f y x
 
 main :: IO()
