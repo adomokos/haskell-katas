@@ -41,4 +41,5 @@ main = hspec $ do
         it "'all' and 'any' works like it's expected" $ do
             (any (==4) [2,3,5,6,1,4]) `shouldBe` True
             (all (>4) [2,3,5,6,1,4]) `shouldBe` False
-
+            (all (`elem` ['A'..'Z']) "HEYGUYSwhatsup")
+                `shouldBe` False
