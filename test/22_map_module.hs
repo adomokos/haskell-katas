@@ -2,6 +2,7 @@ import Test.Hspec
 import Test.QuickCheck
 import Control.Exception (evaluate)
 import qualified Data.Map as Map
+import Data.Char
 
 phoneBook = 
     [("betty","555-2938")
@@ -23,4 +24,14 @@ main = hspec $ do
         it "can check if a Map is empty" $ do
             Map.null Map.empty `shouldBe` True
             (Map.null $ Map.fromList [(2,3),(5,5)]) `shouldBe` False
-
+        it "can tell if a key is member of a map" $ do
+            (Map.member 3 $ Map.fromList [(3,6),(4,3),(6,9)]) `shouldBe` True
+            (Map.member 3 $ Map.fromList [(4,3),(6,9)]) `shouldBe` False
+        it "can map and filter values in a map" $ do
+            (Map.map (*100) $ Map.fromList [(1,1),(2,4),(3,9)])
+                `shouldBe` (Map.fromList [(1,100),(2,400),(3,900)])
+            (Map.filter isUpper $ Map.fromList [(1,'a'),(2,'A'),(3,'b'),(4,'B')])
+                `shouldBe` (Map.fromList [(2,'A'),(4,'B')])
+        it "can convert a Map to List" $ do
+            (Map.toList . Map.insert 9 2 $ Map.singleton 4 3)
+                `shouldBe` [(4,3),(9,2)]
