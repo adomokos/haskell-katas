@@ -18,6 +18,9 @@ main = hspec $ do
     describe "Map module" $ do
         it "can convert a list to map with Map.fromList" $ do
             (Map.size $ Map.fromList phoneBook) `shouldBe` 6
+        it "can lookup a value by a key" $ do
+            (Map.lookup "penny" $ Map.fromList phoneBook) `shouldBe` Just "853-2492"
+            (Map.lookup "penny1" $ Map.fromList phoneBook) `shouldBe` Nothing
         it "returns 0 for size of empty map" $ do
             Map.size Map.empty `shouldBe` 0
         it "can insert items into a map" $ do
