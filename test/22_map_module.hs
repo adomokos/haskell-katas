@@ -16,8 +16,9 @@ phoneBook =
 main :: IO()
 main = hspec $ do
     describe "Map module" $ do
-        it "can convert a list to map" $ do
+        it "can convert a list to map with Map.fromList" $ do
             (Map.size $ Map.fromList phoneBook) `shouldBe` 6
+        it "returns 0 for size of empty map" $ do
             Map.size Map.empty `shouldBe` 0
         it "can insert items into a map" $ do
             (length $ Map.insert 3 100 Map.empty) `shouldBe` 1
