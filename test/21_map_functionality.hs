@@ -24,7 +24,7 @@ findKey key = foldr (\(k,v) acc -> if key == k then Just v else acc) Nothing
 
 main :: IO()
 main = hspec $ do
-    describe "Map functions" $ do
+    describe "Map functionality" $ do
         it "can look up by keys" $ do
             {- findKey "bonnie" phoneBook `shouldBe` "452-2928" -}
             findKey "bonnie" phoneBook `shouldBe` Just "452-2928"
