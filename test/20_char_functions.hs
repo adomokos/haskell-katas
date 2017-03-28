@@ -5,6 +5,13 @@ import qualified Data.Char as C
 import qualified Data.List as L
 import Data.Function
 
+encode :: Int -> [Char] -> [Char]
+encode shifter msg = map C.chr $ map (+ shifter) $ map C.ord msg
+
+decode :: Int -> [Char] -> [Char]
+decode shifter msg = encode (negate shifter) msg
+
+
 main :: IO()
 main = hspec $ do
     describe "Char functions" $ do
@@ -29,4 +36,5 @@ main = hspec $ do
             C.ord 'a' `shouldBe` 97
             C.chr 97 `shouldBe` 'a'
         it "can encode a string by shifting its value with provided num" $ do
+            encode 3 "Heeeeey" `shouldBe` "Khhhhh|"
             (decode 3 $ encode 3 "Heeeeey") `shouldBe` "Heeeeey"
