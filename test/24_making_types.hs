@@ -37,6 +37,10 @@ main = hspec $ do
             {- (surface $ Circle 10 20 10) `shouldBe` 314.15927 -}
             {- (surface $ Rectangle 0 0 100 100) -}
                 {- `shouldBe` 10000.0 -}
+            {- (surface $ Rectangle (-10) 0 100 100) -}
+                {- `shouldBe` 11000.0 -}
+            {- (surface $ Rectangle 0 0 (-100) (-100)) -}
+                {- `shouldBe` 10000.0 -}
         {- it "can print out the Shape by adding Show" $ do -}
             {- Circle 10 20 5 `shouldBe` Circle 10.0 20.0 5.0 -}
         {- it "can use Value constructors as functions" $ do -}
