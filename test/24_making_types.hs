@@ -12,6 +12,9 @@ import Control.Exception (evaluate)
 data Point = Point Float Float deriving (Show, Eq)
 data Shape = Circle Point Float | Rectangle Point Point deriving (Show, Eq)
 
+data Point1 a = Point1 a a deriving (Show, Eq)
+data Shape1 a = Circle1 (Point1 a) a | Rectangle1 (Point1 a) (Point1 a) deriving (Show, Eq)
+
 surface :: Shape -> Float
 surface (Circle _ r) = pi * r ^ 2
 surface (Rectangle (Point x1 y1) (Point x2 y2)) =
@@ -60,3 +63,16 @@ main = hspec $ do
                 `shouldBe` Circle (Point 2.0 4.0) 3.0
            (nudge (baseRectangle 4 4)) 2 4
                 `shouldBe` Rectangle (Point 2.0 4.0) (Point 6.0 8.0)
+        it "can create Int point from type class" $ do
+            let point1 = Point1 1 1
+            let point2 = Point1 1 1
+            let point3 = Point1 2 2
+            point1 == point2 `shouldBe` True
+            point3 /= point2 `shouldBe` True
+        it "can create Float point from type class" $ do
+            let point1 = Point1 1.0 1.0
+            {- Converts point2 and point3 for comparison -}
+            let point2 = Point1 1 1
+            let point3 = Point1 2 2
+            point1 == point2 `shouldBe` True
+            point3 /= point2 `shouldBe` True
