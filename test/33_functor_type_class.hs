@@ -27,7 +27,30 @@ import Control.Exception (evaluate)
     Functor wants a type constructor that takes one type and not
     a concrete type.
     Only type constructors with one params can be used in functors.
+
+    Types that can act like a box can be functors.
+
+    Either is a functor
+    instance Functor (Either a) where
+        fmap f (Right x) = Right (f x)
+        fmap f (Left x) = Left x
 -}
+
+data Tree a = EmptyTree | Node a (Tree a) (Tree a) deriving (Show, Read, Eq)
+
+singleton :: a -> Tree a
+singleton x = Node x EmptyTree EmptyTree
+
+treeInsert :: (Ord a) => a -> Tree a -> Tree a
+treeInsert x EmptyTree = singleton x
+treeInsert x (Node a left right)
+    | x == a = Node x left right
+    | x < a = Node a (treeInsert x left) right
+    | x > a = Node a left (treeInsert x right)
+
+instance Functor Tree where
+    fmap f EmptyTree = EmptyTree
+    fmap f (Node x leftsub rightsub) = Node (f x) (fmap f leftsub) (fmap f rightsub)
 
 main :: IO()
 main = hspec $ do
@@ -42,3 +65,10 @@ main = hspec $ do
             fmap (++ " HEY GUYS") Nothing `shouldBe` Nothing
             fmap (*2) (Just 200) `shouldBe` Just 400
             fmap (*3) Nothing `shouldBe` Nothing
+        it "works with our Tree type class" $ do
+            let nums = [20,28,12]
+            let numsTree = foldr treeInsert EmptyTree nums
+
+            fmap (*2) EmptyTree `shouldBe` EmptyTree
+            fmap (*4) (foldr treeInsert EmptyTree [5,7,3])
+                `shouldBe` numsTree
