@@ -59,4 +59,47 @@ main = do
     putStrLn $ a ++ " " ++ b
 -}
 
+{-
+{- Reads only when enter key is hit -}
+main = do
+    c <- getChar
+    if c /= ' '
+        then do
+            putChar c
+            main
+        else return ()
+-}
 
+{-
+import Control.Monad
+
+main = do
+    c <- getChar
+    when (c /= ' ') $ do
+        putChar c
+        main
+-}
+
+{-
+{- This -}
+main = do
+    a <- getLine
+    b <- getLine
+    c <- getLine
+    print [a,b,c]
+-}
+{-
+{- is the same as this: -}
+main = do
+    rs <- sequence [getLine, getLine, getLine]
+    print rs
+-}
+
+{- forever from Control.Monad will repeat the IO action forever -}
+import Control.Monad
+import Data.Char
+
+main = forever $ do
+    putStr "Give me some input: "
+    l <- getLine
+    putStrLn $ map toUpper l
