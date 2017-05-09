@@ -20,3 +20,19 @@ askForNumber gen = do
            then putStrLn "You are correct!"
            else putStrLn $ "Sorry, it was " ++ show randNumber
         askForNumber newGen
+
+{- Another way to do it just in the main function -}
+{-
+main = do
+    gen <- getStdGen
+    let (randNumber, _) = randomR (1,10) gen :: (Int, StdGen)
+    putStr "Which number in the range from 1 to 10 am I thinking of? "
+    numberString <- getLine
+    when (not $ null numberString) $ do
+        let number = read numberString
+        if randNumber == number
+           then putStrLn "You are correct!"
+           else putStrLn $ "Sorry, it was " ++ show randNumber
+        newStdGen
+        main
+-}
