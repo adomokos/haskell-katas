@@ -25,6 +25,7 @@ main = hspec $ do
             {- pending -}
             (fmap (\f -> f 2)) (fmap (*) (Just 3))
                 `shouldBe` (Just 6)
+            (*) <$> (Just 2) <*> (Just 3) `shouldBe` (Just 6)
         it "applies function in list" $ do
             let a = fmap (*) [1,2,3,4]
             fmap (\f -> f 9) a `shouldBe` [9,18,27,36]
