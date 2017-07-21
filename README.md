@@ -8,4 +8,6 @@ The `master` branch has the passing examples, and the [ad-exercices](https://git
 
 You need [HSpec](https://hspec.github.io/) installed globally to run the examples.
 
+The IO examples are in the [test/io](https://github.com/adomokos/haskell_katas/tree/master/test/io) directory.
+
 Enjoy!
