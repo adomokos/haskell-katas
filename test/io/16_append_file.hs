@@ -1,9 +1,10 @@
 {-
     Appends a line to the file we already have.
+    appendFile :: FilePath -> String -> IO ()
 -}
 
 import System.IO
 
 main = do
     todoItem <- getLine
-    appendFile "test/io/todo.txt" (todoItem ++ "\n")
+    ___ "test/io/todo.txt" ___

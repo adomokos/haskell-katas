@@ -6,14 +6,6 @@
 
 main = interact shortLinesOnly
 
-shortLinesOnly :: String -> String
-shortLinesOnly input =
-    let allLines = lines input
-        shortLines = filter (\line -> length line < 10) allLines
-        result = unlines shortLines
-    in result
-
 {-
-    It can be further simplified:
-    main = interact $ unlines . filter ((<10) . length). lines
+    It can be further simplified with one line
 -}

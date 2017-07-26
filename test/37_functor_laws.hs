@@ -19,9 +19,10 @@ main :: IO ()
 main = hspec $ do
     describe "fmap laws" $ do
         it "works with the first law" $ do
-            fmap id (Just 3) `shouldBe` Just 3
-            id (Just 3) `shouldBe` Just 3
-            fmap id [1..5] `shouldBe` [1,2,3,4,5]
-            id [1..5] `shouldBe` [1,2,3,4,5]
-            fmap id ([] :: [Int]) `shouldBe` []
-            fmap id (Nothing :: Maybe Bool) `shouldBe` Nothing
+            pending
+            {- fmap _ (Just 3) `shouldBe` Just 3 -}
+            {- id (___) `shouldBe` Just 3 -}
+            {- fmap __ ___ `shouldBe` [1,2,3,4,5] -}
+            {- id ___  `shouldBe` [1,2,3,4,5] -}
+            {- fmap __ ([] :: [Int]) `shouldBe` [] -}
+            {- fmap __ (Nothing :: Maybe Bool) `shouldBe` ___ -}

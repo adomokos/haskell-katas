@@ -1,5 +1,7 @@
 {-
     Read a non-existing file
+    The `toTry` function should print the number of lines in the file:
+        "The file has 3 lines!"
 -}
 import System.Environment
 import System.IO
@@ -7,11 +9,8 @@ import Control.Exception
 
 main = toTry `catch` handler
 
-toTry :: IO ()
-toTry = do
-    (fileName:_) <- getArgs
-    contents <- readFile fileName
-    putStrLn $ "The file has " ++ show (length (lines contents)) ++ " lines!"
+{- toTry :: IO () -}
+___
 
-handler :: IOError -> IO ()
-handler e = putStrLn "Whoops, had some trouble!"
+{- handler :: IOError -> IO () -}
+___

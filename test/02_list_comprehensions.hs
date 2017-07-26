@@ -21,10 +21,10 @@ main = hspec $ do
         it "can create tuples from lists" $ do
             pending
             [] `shouldBe` [(1,'a'),(1,'b'),(2,'a'),(2,'b'),(3,'a'),(3,'b')]
-        it "can filter for upper-case letters" $ do
+        it "can filter for upper-case letters from \"Apple Brick Cat\"" $ do
             pending
             [] `shouldBe` "ABC"
         it "can be generalized into a function" $ do
             pending
             let f xs = []
-            f "Apple Bick Cat" `shouldBe` "ABC"
+            f "Apple Brick Cat" `shouldBe` "ABC"

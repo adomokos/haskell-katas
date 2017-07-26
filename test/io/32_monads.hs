@@ -1,5 +1,5 @@
 {-
-    Why would anyone use monads, when there functors and applicative functors
+    Why would anyone use monads, when there functors and applicative functors?
     The terse answer - context sensitivity: with a monad, you can make decisions
     on which processing path to follow based on previous results. With applicative
     functors, you have to always apply the same functions.
@@ -25,11 +25,7 @@ main = do
     birthYearString <- getLine
     putStrLn "Please enter some year in the future"
     futureYearString <- getLine
-    let maybeAge = do
-            futureYear <- readMaybe futureYearString
-            birthYear <- readMaybe birthYearString
-            return $
-                if futureYear < birthYear
-                   then yearDiff birthYear futureYear
-                   else yearDiff futureYear birthYear
+    let maybeAge = ...
+            -- auto-correct the user input:
+            --   if the birthYear is higher than futureYear, swap the two
     displayAge maybeAge

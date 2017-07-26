@@ -7,51 +7,44 @@ import Control.Exception (evaluate)
     where if (0) or if ("") if ("WHAT") works.
 -}
 
-class YesNo a where
-    yesno :: a -> Bool
+{- Define a YesNo type class
+   that returns boolean value based on type -}
 
 {- Define some instances -}
-instance YesNo Int where
-    yesno 0 = False
-    yesno _ = True
+{- For Int -}
 
-instance YesNo [a] where
-    yesno [] = False
-    yesno _  = True
+{- For Lists -}
 
-instance YesNo Bool where
-    yesno = id
+{- For Bool -}
 
-instance YesNo (Maybe a) where
-    yesno (Just _) = True
-    yesno Nothing = False
+{- For Maybe -}
 
 data TrafficLight = Red | Yellow | Green deriving (Eq)
 
-instance YesNo TrafficLight where
-    yesno Red = False
-    yesno _ = True
+{- Create derivied instance of YesNo for TrafficLight -}
 
-yesnoIf :: (YesNo y) => y -> a -> a -> a
-yesnoIf yesnoVal yesResult noResult
-    | yesno yesnoVal = yesResult
-    | otherwise = noResult
+{- yesnoIf :: (YesNo y) => y -> a -> a -> a -}
 
 main :: IO()
 main = hspec $ do
     describe "Yes/No typeclass" $ do
         it "works with Bool fields" $ do
-            yesno False `shouldBe` False
+            pending
+            {- yesno False `shouldBe` False -}
         it "works with Ints" $ do
-            yesno (0 :: Int) `shouldBe` False
-            yesno (1 :: Int) `shouldBe` True
+            pending
+            {- yesno (0 :: Int) `shouldBe` False -}
+            {- yesno (1 :: Int) `shouldBe` True -}
         it "works with Lists" $ do
-            yesno [] `shouldBe` False
-            yesno [3,4] `shouldBe` True
+            pending
+            {- yesno [] `shouldBe` False -}
+            {- yesno [3,4] `shouldBe` True -}
         it "works the type TrafficLight" $ do
-            yesno Red `shouldBe` False
-            yesno Green `shouldBe` True
+            pending
+            {- yesno Red `shouldBe` False -}
+            {- yesno Green `shouldBe` True -}
         it "can do a conditional with yesno" $ do
-            yesnoIf Red "true" "false" `shouldBe` "false"
-            yesnoIf [] 1 2 `shouldBe` 2
-            yesnoIf (Just 500) "YEAH!" "NO" `shouldBe` "YEAH!"
+            pending
+            {- yesnoIf Red "true" "false" `shouldBe` "false" -}
+            {- yesnoIf [] 1 2 `shouldBe` 2 -}
+            {- yesnoIf (Just 500) "YEAH!" "NO" `shouldBe` "YEAH!" -}

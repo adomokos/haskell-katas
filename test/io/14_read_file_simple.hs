@@ -1,8 +1,9 @@
 {-
     Reads a file with `readFile`
+    readFile :: FilePath -> IO String
 -}
 import System.IO
 
 main = do
-    contents <- readFile "test/io/girlfriend.txt"
-    putStr contents
+    contents <- ___
+    putStrLn contents

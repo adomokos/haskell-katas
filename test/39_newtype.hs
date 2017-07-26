@@ -12,31 +12,34 @@ import Control.Exception (evaluate)
     * it can have only one value constructor
 
     Making a tuple to be an instance of a Functor is not possible.
-    We can newtype the tuple ina way that the second type
+    We can newtype the tuple in a way that the second type
     parameter represents the type of the first component of the tuple.
 -}
 
-newtype CharList = CharList { getCharList :: [Char] } deriving (Eq, Show)
+{- newtype CharList = ___ -}
 
-newtype Pair b a = Pair { getPair :: (a,b) }
+{- newtype Pair ... = ___ -}
 
-instance Functor (Pair c) where
-    fmap f (Pair (x, y)) = Pair (f x, y)
+{- instance Functor (Pair c) where -}
+    {- fmap ___ -}
 
 main :: IO ()
 main = hspec $ do
     describe "newtype" $ do
         it "can print values" $ do
-            let charList = CharList "this will be shown!"
-            show charList
-                `shouldBe` "CharList {getCharList = \"this will be shown!\"}"
+            pending
+            {- let charList = ___ -}
+            {- show charList -}
+                {- `shouldBe` "CharList {getCharList = \"this will be shown!\"}" -}
         it "can equate values" $ do
-            CharList "benny" == CharList "benny"
-                `shouldBe` True
-            CharList "benny" == CharList "oisters"
-                `shouldBe` False
+            pending
+            {- CharList "benny" == CharList "benny" -}
+                {- `shouldBe` ___ -}
+            {- CharList "benny" == CharList "oisters" -}
+                {- `shouldBe` ___ -}
         it "works with the newtype Pair" $ do
-            (getPair $ fmap (*100) (Pair (2,3)))
-                `shouldBe` (200, 3)
-            (getPair $ fmap reverse (Pair ("london calling", 3)))
-                `shouldBe` ("gnillac nodnol", 3)
+            pending
+            {- (getPair $ fmap (*100) (Pair (2,3))) -}
+                {- `shouldBe` (200, 3) -}
+            {- (getPair $ fmap reverse (Pair ("london calling", 3))) -}
+                {- `shouldBe` ("gnillac nodnol", 3) -}

@@ -1,14 +1,16 @@
 {-
     Generate random 40 chars as 2 sets of 20s
+    getStdGen will get a random generator
+    newStdGen will get a new one if you need it
 -}
 import System.Random
 import Data.List
 
 main = do
-    gen <- getStdGen
-    putStrLn $ take 20 (randomRs ('a','z') gen)
-    gen' <- newStdGen
-    putStrLn $ take 20 (randomRs ('a','z') gen')
+    gen <- ___
+    putStrLn $ ___
+    gen' <- ___
+    putStrLn $ ___
 
 {- Another way to solve it -}
 {- main = do -}

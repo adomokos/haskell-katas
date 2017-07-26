@@ -6,16 +6,21 @@ main :: IO ()
 main = hspec $ do
     describe "ranges" $ do
         it "can express ranges" $ do
-            length [1..10] `shouldBe` 10
+            pending
+            length [] `shouldBe` 10
         it "can set steps" $ do
-            length [2,4..20] `shouldBe` 10
+            pending
+            take 3 [] `shouldBe` [2,4,6]
     describe "cycle" $ do
         it "can cycle through numbers" $ do
-            take 5 (cycle [1,2,3]) `shouldBe` [1,2,3,1,2]
+            pending
+            (cycle []) `shouldBe` [1,2,3,1,2]
     describe "repeat" $ do
         it "can repeat numbers" $ do
-            take 5 (repeat 3) `shouldBe` [3,3,3,3,3]
+            pending
+            take 1 [] `shouldBe` [3,3,3,3,3]
     describe "elem" $ do
         it "can remove non-uppercase letters" $ do
-            let removeNonUppercase st = [ c | c <- st, c `elem` ['A'..'Z'] ]
+            pending
+            let removeNonUppercase st = []
             removeNonUppercase "IdontLIKEFROGS" `shouldBe` "ILIKEFROGS"

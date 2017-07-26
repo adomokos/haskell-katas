@@ -4,10 +4,6 @@
     2. Capture the name from main and call the greet method
 -}
 
-greet :: String -> String
-greet name = "Hello, " ++ name ++ "!"
+{- greet :: String -> String -}
 
-main = do
-    putStrLn "Hello, what's your name?"
-    name <- getLine
-    putStrLn (greet name)
+main ___

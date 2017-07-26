@@ -1,10 +1,12 @@
 {-
     Read the file content, make it upper-cased, write it out.
+    readFile - reads the file content
+    writeFile - writes the string
 -}
 
 import System.IO
 import Data.Char
 
 main = do
-    contents <- readFile "test/io/girlfriend.txt"
-    writeFile "test/io/girlfriendcaps.txt" (map toUpper contents)
+    contents <- ___
+    ___ "test/io/girlfriendcaps.txt" ___

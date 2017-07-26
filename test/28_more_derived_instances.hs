@@ -2,35 +2,41 @@ import Test.Hspec
 import Test.QuickCheck
 import Control.Exception (evaluate)
 
-data Day = Monday | Tuesday | Wednesday
-    | Thursday | Friday | Saturday | Sunday
-        deriving (Eq, Ord, Show, Read, Bounded, Enum)
+{- Day is an enumeration of each day in the week -}
 
 main :: IO()
 main = hspec $ do
     describe "Derived Instances" $ do
         it "can compare two Bool fields" $ do
-            True `compare` False `shouldBe` GT
-            True > False `shouldBe` True
-            True < False `shouldBe` False
+            pending
+            {- Comparing True to False should be greater -}
+            {- ___ ___ False `shouldBe` GT -}
+            {- ___ > False `shouldBe` True -}
+            {- ___ < False `shouldBe` False -}
         it "can compare Maybe values" $ do
-            Nothing < Just 100 `shouldBe` True
-            Nothing > Just (-49999) `shouldBe` False
-            Just 3 `compare` Just 2 `shouldBe` GT
+            pending
+            {- ___ < Just 100 `shouldBe` True -}
+            {- Nothing > ___ (-49999) `shouldBe` False -}
+            {- ___ 3 `compare` ___ 2 `shouldBe` GT -}
         it "can be part of Enum typeclass as all value constructors are nullary" $ do
-            {- Enums have predecessors and successors -}
-            show Wednesday `shouldBe` "Wednesday"
-            read "Saturday" `shouldBe` Saturday
+            pending
+            {- ___ Wednesday `shouldBe` "Wednesday" -}
+            {- ___ "Saturday" `shouldBe` Saturday -}
         it "can be compared as it's part of Eq and Ord type classes" $ do
-            Saturday == Sunday `shouldBe` False
-            Monday == Monday `shouldBe` True
-            Monday < Wednesday `shouldBe` True
-            Monday `compare` Tuesday `shouldBe` LT
+            pending
+            {- ___ == Sunday `shouldBe` False -}
+            {- ___ == Monday `shouldBe` True -}
+            {- ___ < Wednesday `shouldBe` True -}
+            {- ___ ___ Tuesday `shouldBe` LT -}
         it "is also part of Bounded, can get lowest and highest value" $ do
-            (minBound :: Day) `shouldBe` Monday
-            (maxBound :: Day) `shouldBe` Sunday
+            pending
+            {- (___ :: Day) `shouldBe` Monday -}
+            {- (___ :: Day) `shouldBe` Sunday -}
         it "is an instance of Enum, can get predecessor and successors" $ do
-            succ Monday `shouldBe` Tuesday
-            pred Saturday `shouldBe` Friday
-            evaluate (pred Monday) `shouldThrow` anyErrorCall
+            pending
+            {- Enums have predecessors and successors -}
+            {- ___ Monday `shouldBe` Tuesday -}
+            {- ___ Saturday `shouldBe` Friday -}
+            {- Calling predecessor for Monday will throw an error -}
+            {- ___ (___ Monday) `shouldThrow` anyErrorCall -}
 
