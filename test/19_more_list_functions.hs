@@ -54,7 +54,7 @@ main = hspec $ do
         it "finds the index of a predicate" $ do
             pending
             {- hint: use `findIndex` -}
-            {- ___ findIndex (==4) [5,3,2,1,6,4] `shouldBe` Just 5 -}
+            {- ___ ___ (==4) [5,3,2,1,6,4] `shouldBe` Just 5 -}
         it "can zip more than 2 lists" $ do
             pending
             {- hint: use `zipWith3` -}
