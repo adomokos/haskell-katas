@@ -29,7 +29,7 @@ main = hspec $ do
             pending
             {- ___ set1 set2 -}
                 {- `shouldBe` Set.fromList " !.?AIRTabcdefghijlmnorstuvwy" -}
-        it "can use null, size, singleton, delete" $ do
+        it "can use null, size, singleton, insert, delete" $ do
             pending
             {- ___ Set.empty `shouldBe` True -}
             {- ___ (Set.fromList [1,2,3]) `shouldBe` False -}
