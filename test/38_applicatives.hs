@@ -23,8 +23,9 @@ main = hspec $ do
     describe "Applicative" $ do
         it "applies function inside the Just" $ do
             pending
-            {- (fmap (___)) (fmap (_) (Just 3)) -}
-                {- `shouldBe` (Just _) -}
+            -- Hint: use lambda expression
+            {- (___) (fmap (*) (Just 3)) -}
+                {- `shouldBe` (Just 6) -}
             {- __ <$> ___ <*> (Just 3) `shouldBe` (Just 6) -}
         it "applies function in list" $ do
             pending
