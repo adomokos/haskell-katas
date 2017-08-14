@@ -24,18 +24,18 @@ main = hspec $ do
         it "applies function inside the Just" $ do
             pending
             -- Hint: use lambda expression
-            {- (___) (fmap (*) (Just 3)) -}
+            {- (fmap (___)) (fmap (*) (Just 3)) -}
                 {- `shouldBe` (Just 6) -}
-            {- __ <$> ___ <*> (Just 3) `shouldBe` (Just 6) -}
+            {- ___ <$> ___ <*> Just 3 `shouldBe` Just 6 -}
         it "applies function in list" $ do
             pending
-            {- let a = fmap __ ____ -}
+            {- let a = fmap ___ ___ -}
             {- fmap (\f -> f 9) a `shouldBe` [9,18,27,36] -}
         it "works with Maybe" $ do
             pending
-            {- ___ ___<*> Just 9 -}
+            {- ___ ___ <*> Just 9 -}
                 {- `shouldBe` Just 12 -}
-            {- pure (__) <*> Just __ -}
+            {- pure (___) <*> Just ___ -}
                 {- `shouldBe` Just 13 -}
             {- Just (++"hahah") <*> ___ -}
                 {- `shouldBe` Nothing -}
@@ -43,18 +43,18 @@ main = hspec $ do
                 {- `shouldBe` (Nothing :: Maybe String) -}
         it "operates on several functors with a single function" $ do
             pending
-            {- pure (__) <*> Just __ <*> Just 5 -}
+            {- pure (___) <*> Just ___ <*> Just 5 -}
                 {- `shouldBe` Just 8 -}
-            {- pure (+) <*> Just __ <*> ___ -}
+            {- pure (+) <*> Just ___ <*> ___ -}
                 {- `shouldBe` (Nothing :: Maybe Int) -}
         it "can use <$> as fmap with an infix operator" $ do
             pending
-            {- (__) <$> Just ___  <*> Just "volta" -}
+            {- (___) <$> Just ___  <*> Just "volta" -}
                 {- `shouldBe` Just "johntravolta" -}
-            {- (__) "johntra" "" `shouldBe` "johntravolta" -}
+            {- (___) "johntra" "" `shouldBe` "johntravolta" -}
         it "works with a list of functions" $ do
             pending
-            {- [] <*> [1,2,3] -}
+            {- [___] <*> [1,2,3] -}
                 {- `shouldBe` [0,0,0,101,102,103,1,4,9] -}
             {- [(_),(_)] <*> [1,2] <*> [3,4] -}
                 {- `shouldBe` [4,5,5,6,3,4,6,8] -}
@@ -63,8 +63,8 @@ main = hspec $ do
             {- example...
             [x*y | x <- [2,5,10], y <- [8,10,11]]
                 `shouldBe` [16,20,22,40,50,55,80,100,110] -}
-            {- (__) <$> [___] <*> [___] -}
+            {- (___) <$> [___] <*> [___] -}
                 {- `shouldBe` [16,20,22,40,50,55,80,100,110] -}
             -- Keep only the values that are greater than 50 of the product
-            {- (filter (___) $ (_) <$> [2,5,10] <*> [8,10,11]) -}
+            {- (filter (___) $ (___) <$> [2,5,10] <*> [8,10,11]) -}
                 {- `shouldBe` [55,80,100,110] -}
