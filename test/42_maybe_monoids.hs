@@ -30,4 +30,12 @@ main = hspec $ do
             pending
             {- (___ . ___ . ___ ___ $ [Nothing, Just 9, Just 10, Nothing]) -}
                 {- `shouldBe` Just 10 -}
-
+        it "can find the first and last matching value from a list" $ do
+            pending
+            {- let interesting = [ 'a', 'b' ] -}
+            {- let q c = if c `elem` interesting then Just c else Nothing -}
+            {- q 'a' `shouldBe` ___ -}
+            {- q 'c' `shouldBe` ___ -}
+            --- Create First of 'q' product
+            {- getFirst (___ $ map (___ . ___) "cabinet") `shouldBe` Just 'a' -}
+            {- getLast (___ $ map (___ . ___) "cabinet") `shouldBe` Just 'b' -}
