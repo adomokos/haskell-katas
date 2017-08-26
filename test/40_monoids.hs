@@ -19,7 +19,7 @@ import Data.Monoid
     "*" and ++ are true for monoid laws as they are associative:
     * The function takes two parameters
     * The parameters and the returned value have the same type
-    * There exists such a vlue that does not change other values
+    * There exists such a value that does not change other values
       when used with the binary function.
 
     For product and sum Data.Monoid exposes Product and Sum
