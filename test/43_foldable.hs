@@ -6,7 +6,7 @@ import qualified Data.Foldable as F
 
 -- Define a tree Data Type
 
--- Add implementation for F.Foldable to Tree
+-- Add implementation for F.Foldable with F.foldMap to Tree
 {- instance F.Foldable Tree where -}
     {- ___ -}
 
