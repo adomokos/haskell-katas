@@ -48,9 +48,8 @@ treeInsert x (Node a left right)
     | x < a = Node a (treeInsert x left) right
     | x > a = Node a left (treeInsert x right)
 
-instance Functor Tree where
-    fmap f EmptyTree = EmptyTree
-    fmap f (Node x leftsub rightsub) = Node (f x) (fmap f leftsub) (fmap f rightsub)
+{- Create an Functor implementation of the Tree -}
+
 
 main :: IO()
 main = hspec $ do

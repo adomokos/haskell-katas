@@ -13,7 +13,11 @@ import Control.Exception (evaluate)
 data TrafficLight = Red | Yellow | Green
 
 {- Instead of deriving class instances for it, writing up instances by hand -}
-{- instance Eq ... where -}
+instance Eq TrafficLight where
+    (==) Red Red = True
+    (==) Yellow Yellow = True
+    (==) Green Green = True
+    (==) _ _ = False
 
 {-
     Minimal complete definition for the typeclass = the minimum of functions that we
@@ -21,17 +25,18 @@ data TrafficLight = Red | Yellow | Green
 -}
 
 {- Similarly, the instance of Show can be created by hand -}
-{- instance Show ... where -}
+instance Show TrafficLight where
+    show Red = "Red light"
+    show Yellow = "Yellow light"
+    show Green = "Green light"
 
 main :: IO()
 main = hspec $ do
     describe "Recursive Data Structures" $ do
         it "can use the manually created Eq instance" $ do
-            pending
-            {- Red == Red `shouldBe` True -}
-            {- Yellow == Green `shouldBe` False -}
-            {- Yellow /= Red `shouldBe` True -}
+            Red == Red `shouldBe` True
+            Yellow == Green `shouldBe` False
+            Yellow /= Red `shouldBe` True
         it "can use the manually created Show instance" $ do
-            pending
-            {- show Red `shouldBe` "Red light" -}
-            {- show Green `shouldBe` "Green light" -}
+            show Red `shouldBe` "Red light"
+            show Green `shouldBe` "Green light"
