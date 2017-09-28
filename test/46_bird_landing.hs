@@ -5,6 +5,12 @@ import Control.Exception (evaluate)
 type Birds = Int
 type Pole = (Birds,Birds)
 
+{-
+   The rules for bird landing: the person keeps his balance if the
+   number of birds on the left side and the number of birds on the
+   right side of the pole is within three.
+-}
+
 {- landLeft1 :: Birds -> Pole -> Pole -}
 
 {- landRight1 :: Birds -> Pole -> Pole -}
