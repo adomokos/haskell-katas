@@ -32,5 +32,6 @@ main = hspec $ do
             {- fooMonad `shouldBe` Just "3!" -}
         it "can simplify more complex expressions" $ do
             pending
-            {- (Just 9 >>= (\x -> Just (x > 8))) `shouldBe` Just True -}
+            -- Use a lambda here for the prdicate
+            {- (Just 9 >>= (___)) `shouldBe` Just True -}
             {- marySue `shouldBe` Just True -}
