@@ -12,8 +12,8 @@ phoneBook =
     ]
 
 {- findKey :: (Eq k) => k -> [(k,v)] -> v -}
-{- Use this later -}
-{- findKey :: (Eq k) => k -> [(k,v)] -> Maybe v -}
+
+{- findKey' :: (Eq k) => k -> [(k,v)] -> Maybe v -}
 
 main :: IO()
 main = hspec $ do
@@ -23,5 +23,5 @@ main = hspec $ do
             {- Use this test for the happy-path -}
             {- findKey "bonnie" phoneBook `shouldBe` "452-2928" -}
             {- Use these tests to test edge cases -}
-            {- findKey "bonnie" phoneBook `shouldBe` Just "452-2928" -}
-            {- findKey "bonn" phoneBook `shouldBe` Nothing -}
+            {- findKey' "bonnie" phoneBook `shouldBe` Just "452-2928" -}
+            {- findKey' "bonn" phoneBook `shouldBe` Nothing -}
