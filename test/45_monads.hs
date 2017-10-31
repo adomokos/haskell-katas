@@ -1,6 +1,6 @@
 {-
    Monads are just beefed up applicative functors, much like
-   applicative functors are only beefed up functor.s
+   applicative functors are only beefed up functors.
 
    (>>=) :: (Monad m) => m a -> (a -> m b) -> m b
    pronounced - bind
