@@ -6,8 +6,7 @@ import Data.Monoid
 main :: IO ()
 main = hspec $ do
     describe "Maybe Monoids" $ do
-        it "works with Maybe values" $ do
-            pending
+        it "`mappend` with Maybe values" $ do
             {- ___ ___ Just "andy" `shouldBe` Just "andy" -}
             {- Just LT <> ___ `shouldBe` Just LT -}
             {- ___ ___ <> Just (Sum ___) -}
