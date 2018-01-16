@@ -14,10 +14,13 @@ import Data.Monoid
         (Writer (x,v)) >>= f = let (Writer (y, v')) = f x in Writer (y, v `mappend` v'))
 -}
 
+-- Print "Got number: " and the var
 {- logNumber :: Int -> Writer [String] Int -}
 
+-- Multiply 3 and 5, but log the numbers using do notation
 {- multWithLog :: Writer [String] Int -}
 
+-- Same as above, but `tell` that "Gonna multiply these two"
 {- multWithLog' :: Writer [String] Int -}
 
 main :: IO()
@@ -38,4 +41,4 @@ main = hspec $ do
         it "can 'tell' what's going on" $ do
             pending
             {- runWriter multWithLog' -}
-                {- `shouldBe` (15, ["Got number: 3", "Got number: 5","Gonna multiply these two: 3"]) -}
+                {- `shouldBe` (15, ["Got number: 3", "Got number: 5","Gonna multiply these two"]) -}
