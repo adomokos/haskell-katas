@@ -18,7 +18,6 @@ import Data.Monoid
 
 {- multWithLog :: Writer [String] Int -}
 
-
 {- multWithLog' :: Writer [String] Int -}
 
 main :: IO()
@@ -27,11 +26,11 @@ main = hspec $ do
         it "can pair up runWriter with different monoids" $ do
             pending
             {- (runWriter (return 3 :: Writer String Int)) -}
-                {- `shouldBe` (3, "") -}
+                {- `shouldBe` (3, ___) -}
             {- (runWriter (return 3 :: Writer (Sum Int) Int)) -}
-                {- `shouldBe` (3, Sum{getSum = 0}) -}
+                {- `shouldBe` (3, ___) -}
             {- (runWriter (return 3 :: Writer (Product Int) Int)) -}
-                {- `shouldBe` (3, Product {getProduct = 1}) -}
+                {- `shouldBe` (3, ___) -}
         it "can use do notation as well" $ do
             pending
             {- runWriter multWithLog -}
