@@ -18,6 +18,12 @@ import qualified Data.ByteString.Char8 as B8
 type Food = String
 type Price = Sum Int
 
+{-
+    This is the menu
+    beans -> milk is 25
+    jerky -> whiskey is 99
+    _ -> beer is 30
+-}
 {- addDrink :: Food -> (Food,Price) -}
 
 main :: IO()
@@ -57,9 +63,6 @@ main = hspec $ do
             {- Sum 3 ___ Sum ___ `shouldBe` Sum {getSum = 12} -}
         it "adds an accompanying drink to a food" $ do
             pending
-            -- "milk" is 25
-            -- "whiskey" is 99
-            -- "beer" is 30
             {- (("beans", Sum 10) `applyLog''` addDrink) -}
                 {- `shouldBe` ("milk", Sum {getSum = 35}) -}
             {- (("jerky", Sum 25) `applyLog''` addDrink) -}
