@@ -41,6 +41,7 @@ main = hspec $ do
             {- ([1..50] >>= (\x -> (___) >> return x)) -}
                 {- `shouldBe` [7,17,27,37,47] -}
         it "works in conjunction with >>" $ do
+            -- compare 5 and 2 in the examples below
             pending
             {- (guard (___) >> return "cool" :: [String]) -}
                 {- `shouldBe` ["cool"] -}
