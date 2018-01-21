@@ -30,6 +30,7 @@ main = hspec $ do
             {- [x | x <- [1..50], ___ ] -}
                 {- `shouldBe` [7,17,27,37,47] -}
         it "can put it in a minimal default context if true" $ do
+            -- compare 5 and 2 in the examples below
             pending
             {- (guard (___) :: Maybe ()) `shouldBe` (Just ()) -}
             {- (guard (___) :: Maybe ()) `shouldBe` Nothing -}
