@@ -1,0 +1,50 @@
+-- This file has been generated from package.yaml by hpack version 0.20.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 595e3abd68919c41a5ab51f498f217e597f8dbc8ca437a3417beb30267f5bdda
+
+name:                katas
+version:             0.1.0.0
+homepage:            https://github.com/adomokos/hashmir#readme
+license-file:        LICENSE
+author:              Attila Domokos <adomokos@gmail.com>
+maintainer:          adomokos@gmail.com
+copyright:           2018 Attila Domokos
+category:            Console App
+build-type:          Simple
+cabal-version:       >= 1.10
+
+library
+  hs-source-dirs:
+      src/
+  build-depends:
+      base >=4.7 && <5
+  other-modules:
+      Paths_katas
+  default-language: Haskell2010
+
+executable katas-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      app/
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+  other-modules:
+      Paths_katas
+  default-language: Haskell2010
+
+test-suite katas-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  hs-source-dirs:
+      test/
+  build-depends:
+      QuickCheck
+    , base >=4.7 && <5
+    , containers
+    , hspec ==2.*
+  other-modules:
+      Katas.Lists.ExtractingSpec Katas.Lists.ComprehensionsSpec Katas.Lists.RangesSpec Katas.Lists.TuplesSpec Katas.Types.IntroSpec Katas.Flow.PatternMatchingSpec Katas.Flow.GuardsSpec Katas.Flow.WhereSpec Katas.Flow.LetItBeSpec Katas.Flow.CaseExpressionSpec Katas.Flow.RecursionsSpec Katas.Hofs.IntroSpec Katas.Hofs.LambdasSpec Katas.Hofs.FoldsSpec Katas.Hofs.ScansSpec Katas.Hofs.FunctionApplicationSpec Katas.Hofs.FunctionCompositionSpec Katas.Modules.IntroSpec Katas.Modules.ListFunctionsSpec Katas.Modules.CharFunctionsSpec
+  default-language: Haskell2010
