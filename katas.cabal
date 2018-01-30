@@ -2,7 +2,7 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 809c3656dcc52d5e311ec54b68236a570bd6c1331f0fb3679e1cd15e1e366556
+-- hash: ee3c10a0eb5e74ff7db9ed7ebf4ead84dc81c3789ee1795079d7f3eb22b47d33
 
 name:                katas
 version:             0.1.0.0
@@ -46,5 +46,5 @@ test-suite katas-test
     , containers
     , hspec ==2.*
   other-modules:
-      Katas.Lists.ExtractingSpec Katas.Lists.ComprehensionsSpec Katas.Lists.RangesSpec Katas.Lists.TuplesSpec Katas.Types.IntroSpec Katas.Flow.PatternMatchingSpec Katas.Flow.GuardsSpec Katas.Flow.WhereSpec Katas.Flow.LetItBeSpec Katas.Flow.CaseExpressionSpec Katas.Flow.RecursionsSpec Katas.Hofs.IntroSpec Katas.Hofs.LambdasSpec Katas.Hofs.FoldsSpec Katas.Hofs.ScansSpec Katas.Hofs.FunctionApplicationSpec Katas.Hofs.FunctionCompositionSpec Katas.Modules.IntroSpec Katas.Modules.ListFunctionsSpec Katas.Modules.CharFunctionsSpec Katas.Modules.MapFunctionalitySpec Katas.Modules.MapFunctionsSpec
+      Katas.Lists.ExtractingSpec Katas.Lists.ComprehensionsSpec Katas.Lists.RangesSpec Katas.Lists.TuplesSpec Katas.Types.IntroSpec Katas.Flow.PatternMatchingSpec Katas.Flow.GuardsSpec Katas.Flow.WhereSpec Katas.Flow.LetItBeSpec Katas.Flow.CaseExpressionSpec Katas.Flow.RecursionsSpec Katas.Hofs.IntroSpec Katas.Hofs.LambdasSpec Katas.Hofs.FoldsSpec Katas.Hofs.ScansSpec Katas.Hofs.FunctionApplicationSpec Katas.Hofs.FunctionCompositionSpec Katas.Modules.IntroSpec Katas.Modules.ListFunctionsSpec Katas.Modules.CharFunctionsSpec Katas.Modules.MapFunctionalitySpec Katas.Modules.MapFunctionsSpec Katas.Modules.SetFunctionsSpec
   default-language: Haskell2010

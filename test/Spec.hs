@@ -22,6 +22,7 @@ import qualified Katas.Modules.ListFunctionsSpec
 import qualified Katas.Modules.CharFunctionsSpec
 import qualified Katas.Modules.MapFunctionalitySpec
 import qualified Katas.Modules.MapFunctionsSpec
+import qualified Katas.Modules.SetFunctionsSpec
 
 main :: IO ()
 main = hspec spec
@@ -50,4 +51,5 @@ spec = do
     describe "20 - Modules - Char Functions" Katas.Modules.CharFunctionsSpec.spec
     describe "21 - Modules - Map Functionality" Katas.Modules.MapFunctionalitySpec.spec
     describe "22 - Modules - Map Functions" Katas.Modules.MapFunctionsSpec.spec
+    describe "23 - Modules - Set Functions" Katas.Modules.SetFunctionsSpec.spec
 
