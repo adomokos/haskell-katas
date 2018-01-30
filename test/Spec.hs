@@ -20,6 +20,7 @@ import qualified Katas.Hofs.FunctionCompositionSpec
 import qualified Katas.Modules.IntroSpec
 import qualified Katas.Modules.ListFunctionsSpec
 import qualified Katas.Modules.CharFunctionsSpec
+import qualified Katas.Modules.MapFunctionalitySpec
 
 main :: IO ()
 main = hspec spec
@@ -46,4 +47,5 @@ spec = do
     describe "18 - Modules (Intro)" Katas.Modules.IntroSpec.spec
     describe "19 - Modules - List Functions" Katas.Modules.ListFunctionsSpec.spec
     describe "20 - Modules - Char Functions" Katas.Modules.CharFunctionsSpec.spec
+    describe "21 - Modules - Map Functionality" Katas.Modules.MapFunctionalitySpec.spec
 

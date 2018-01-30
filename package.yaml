@@ -49,3 +49,4 @@ tests:
       Katas.Modules.IntroSpec
       Katas.Modules.ListFunctionsSpec
       Katas.Modules.CharFunctionsSpec
+      Katas.Modules.MapFunctionalitySpec
