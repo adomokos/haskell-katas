@@ -50,3 +50,4 @@ tests:
       Katas.Modules.ListFunctionsSpec
       Katas.Modules.CharFunctionsSpec
       Katas.Modules.MapFunctionalitySpec
+      Katas.Modules.MapFunctionsSpec
