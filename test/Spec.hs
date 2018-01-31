@@ -7,6 +7,7 @@ import qualified Katas.Lists.TuplesSpec
 import qualified Katas.Types.IntroSpec
 import qualified Katas.Types.MakingTypesSpec
 import qualified Katas.Types.RecordSpec
+import qualified Katas.Types.TypeParametersSpec
 import qualified Katas.Flow.PatternMatchingSpec
 import qualified Katas.Flow.GuardsSpec
 import qualified Katas.Flow.WhereSpec
@@ -56,4 +57,5 @@ spec = do
     describe "23 - Modules - Set Functions" Katas.Modules.SetFunctionsSpec.spec
     describe "24 - Types - Making Types" Katas.Types.MakingTypesSpec.spec
     describe "25 - Types - Records" Katas.Types.RecordSpec.spec
+    describe "26 - Types - Type Parameters" Katas.Types.TypeParametersSpec.spec
 
