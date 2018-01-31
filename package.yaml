@@ -35,6 +35,7 @@ tests:
       Katas.Lists.TuplesSpec
       Katas.Types.IntroSpec
       Katas.Types.MakingTypesSpec
+      Katas.Types.RecordSpec
       Katas.Flow.PatternMatchingSpec
       Katas.Flow.GuardsSpec
       Katas.Flow.WhereSpec
