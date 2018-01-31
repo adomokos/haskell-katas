@@ -9,6 +9,7 @@ import qualified Katas.Types.MakingTypesSpec
 import qualified Katas.Types.RecordSpec
 import qualified Katas.Types.TypeParametersSpec
 import qualified Katas.Types.DerivedInstancesSpec
+import qualified Katas.Types.MoreDerivedInstancesSpec
 import qualified Katas.Flow.PatternMatchingSpec
 import qualified Katas.Flow.GuardsSpec
 import qualified Katas.Flow.WhereSpec
@@ -59,5 +60,6 @@ spec = do
     describe "24 - Types - Making Types" Katas.Types.MakingTypesSpec.spec
     describe "25 - Types - Records" Katas.Types.RecordSpec.spec
     describe "26 - Types - Type Parameters" Katas.Types.TypeParametersSpec.spec
-    describe "26 - Types - Derived Instances" Katas.Types.DerivedInstancesSpec.spec
+    describe "27 - Types - Derived Instances" Katas.Types.DerivedInstancesSpec.spec
+    describe "28 - Types - More Derived Instances" Katas.Types.MoreDerivedInstancesSpec.spec
 

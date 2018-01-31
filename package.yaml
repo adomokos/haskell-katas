@@ -38,6 +38,7 @@ tests:
       Katas.Types.RecordSpec
       Katas.Types.TypeParametersSpec
       Katas.Types.DerivedInstancesSpec
+      Katas.Types.MoreDerivedInstancesSpec
       Katas.Flow.PatternMatchingSpec
       Katas.Flow.GuardsSpec
       Katas.Flow.WhereSpec
