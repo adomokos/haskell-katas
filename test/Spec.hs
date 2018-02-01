@@ -36,6 +36,7 @@ import qualified Katas.Fam.FunctorTypeClassSpec
 import qualified Katas.Fam.FmapFunctionCompositionSpec
 import qualified Katas.Fam.FunctorLawsSpec
 import qualified Katas.Fam.ApplicativesSpec
+import qualified Katas.Fam.MoreApplicativesSpec
 import qualified Katas.Exercises.RPNCalculatorSpec
 
 main :: IO ()
@@ -80,4 +81,5 @@ spec = do
     describe "35 - FAM - Fmap Function Composition" Katas.Fam.FmapFunctionCompositionSpec.spec
     describe "36 - FAM - Functor Laws" Katas.Fam.FunctorLawsSpec.spec
     describe "37 - FAM - Applicatives" Katas.Fam.ApplicativesSpec.spec
+    describe "38 - FAM - More Applicatives" Katas.Fam.MoreApplicativesSpec.spec
 
