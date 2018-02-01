@@ -70,4 +70,5 @@ tests:
       Katas.Fam.NewTypeSpec
       Katas.Fam.MonoidsSpec
       Katas.Fam.OrderingMonoidsSpec
+      Katas.Fam.MaybeMonoidsSpec
       Katas.Exercises.RPNCalculatorSpec
