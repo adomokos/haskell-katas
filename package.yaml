@@ -73,3 +73,4 @@ tests:
       Katas.Fam.MaybeMonoidsSpec
       Katas.Fam.FoldableSpec
       Katas.Exercises.RPNCalculatorSpec
+      Katas.Exercises.LondonToHeathrowSpec
