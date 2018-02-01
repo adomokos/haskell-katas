@@ -11,6 +11,7 @@ import qualified Katas.Types.TypeParametersSpec
 import qualified Katas.Types.DerivedInstancesSpec
 import qualified Katas.Types.MoreDerivedInstancesSpec
 import qualified Katas.Types.AliasingSpec
+import qualified Katas.Types.RecursiveDataStructuresSpec
 import qualified Katas.Flow.PatternMatchingSpec
 import qualified Katas.Flow.GuardsSpec
 import qualified Katas.Flow.WhereSpec
@@ -64,4 +65,5 @@ spec = do
     describe "27 - Types - Derived Instances" Katas.Types.DerivedInstancesSpec.spec
     describe "28 - Types - More Derived Instances" Katas.Types.MoreDerivedInstancesSpec.spec
     describe "29 - Types - Aliasing" Katas.Types.AliasingSpec.spec
+    describe "30 - Types - Recursive Data Structures" Katas.Types.RecursiveDataStructuresSpec.spec
 
