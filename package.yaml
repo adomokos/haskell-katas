@@ -69,4 +69,5 @@ tests:
       Katas.Fam.MoreApplicativesSpec
       Katas.Fam.NewTypeSpec
       Katas.Fam.MonoidSpec
+      Katas.Fam.OrderingMonoidsSpec
       Katas.Exercises.RPNCalculatorSpec

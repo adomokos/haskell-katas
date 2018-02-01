@@ -40,6 +40,7 @@ import qualified Katas.Fam.ApplicativesSpec
 import qualified Katas.Fam.MoreApplicativesSpec
 import qualified Katas.Fam.NewTypeSpec
 import qualified Katas.Fam.MonoidSpec
+import qualified Katas.Fam.OrderingMonoidsSpec
 import qualified Katas.Exercises.RPNCalculatorSpec
 
 main :: IO ()
@@ -87,5 +88,6 @@ spec = do
     describe "38 - FAM - Applicatives" Katas.Fam.ApplicativesSpec.spec
     describe "39 - FAM - More Applicatives" Katas.Fam.MoreApplicativesSpec.spec
     describe "40 - FAM - New Type for fmap" Katas.Fam.NewTypeSpec.spec
-    describe "40 - FAM - Monoids" Katas.Fam.MonoidSpec.spec
+    describe "41 - FAM - Monoids" Katas.Fam.MonoidSpec.spec
+    describe "42 - FAM - Ordering Monoids" Katas.Fam.OrderingMonoidsSpec.spec
 
