@@ -67,4 +67,5 @@ tests:
       Katas.Fam.FunctorLawsSpec
       Katas.Fam.ApplicativesSpec
       Katas.Fam.MoreApplicativesSpec
+      Katas.Fam.NewTypeSpec
       Katas.Exercises.RPNCalculatorSpec
