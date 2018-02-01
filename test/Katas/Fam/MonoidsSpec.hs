@@ -1,4 +1,4 @@
-module Katas.Fam.MonoidSpec (spec) where
+module Katas.Fam.MonoidsSpec (spec) where
 
 import Test.Hspec
 import Test.QuickCheck
