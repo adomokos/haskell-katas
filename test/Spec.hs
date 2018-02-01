@@ -32,6 +32,7 @@ import qualified Katas.Modules.CharFunctionsSpec
 import qualified Katas.Modules.MapFunctionalitySpec
 import qualified Katas.Modules.MapFunctionsSpec
 import qualified Katas.Modules.SetFunctionsSpec
+import qualified Katas.Fam.FunctorTypeClassSpec
 
 main :: IO ()
 main = hspec spec
@@ -70,4 +71,5 @@ spec = do
     describe "30 - Types - Recursive Data Structures" Katas.Types.RecursiveDataStructuresSpec.spec
     describe "31 - Types - More Type Classes" Katas.Types.MoreTypeClassesSpec.spec
     describe "32 - Types - YesNo Type Class" Katas.Types.YesNoTypeClassSpec.spec
+    describe "33 - FAM - Functor Type Class" Katas.Fam.FunctorTypeClassSpec.spec
 

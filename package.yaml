@@ -61,3 +61,4 @@ tests:
       Katas.Modules.MapFunctionalitySpec
       Katas.Modules.MapFunctionsSpec
       Katas.Modules.SetFunctionsSpec
+      Katas.Fam.FunctorTypeClassSpec
