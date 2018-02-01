@@ -33,6 +33,7 @@ import qualified Katas.Modules.MapFunctionalitySpec
 import qualified Katas.Modules.MapFunctionsSpec
 import qualified Katas.Modules.SetFunctionsSpec
 import qualified Katas.Fam.FunctorTypeClassSpec
+import qualified Katas.Exercises.RPNCalculatorSpec
 
 main :: IO ()
 main = hspec spec
@@ -72,4 +73,5 @@ spec = do
     describe "31 - Types - More Type Classes" Katas.Types.MoreTypeClassesSpec.spec
     describe "32 - Types - YesNo Type Class" Katas.Types.YesNoTypeClassSpec.spec
     describe "33 - FAM - Functor Type Class" Katas.Fam.FunctorTypeClassSpec.spec
+    describe "33 - Exercises - Reverse Polish Notation Calculator" Katas.Exercises.RPNCalculatorSpec.spec
 
