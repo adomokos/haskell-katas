@@ -2,7 +2,7 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: a6a7c192a4c572c44954139df0e0a1615b2804297b6a3eff73c293d096ec0d6f
+-- hash: e1f9e0c5b0912180bbdc0941fe1ffc11be87f696c6dce52ceee3be6fbae73cb1
 
 name:                katas
 version:             0.1.0.0
@@ -46,5 +46,5 @@ test-suite katas-test
     , containers
     , hspec ==2.*
   other-modules:
-      Katas.Lists.ExtractingSpec Katas.Lists.ComprehensionsSpec Katas.Lists.RangesSpec Katas.Lists.TuplesSpec Katas.Types.IntroSpec Katas.Types.MakingTypesSpec Katas.Types.RecordSpec Katas.Types.TypeParametersSpec Katas.Types.DerivedInstancesSpec Katas.Types.MoreDerivedInstancesSpec Katas.Types.AliasingSpec Katas.Types.RecursiveDataStructuresSpec Katas.Types.MoreTypeClassesSpec Katas.Types.YesNoTypeClassSpec Katas.Flow.PatternMatchingSpec Katas.Flow.GuardsSpec Katas.Flow.WhereSpec Katas.Flow.LetItBeSpec Katas.Flow.CaseExpressionSpec Katas.Flow.RecursionsSpec Katas.Hofs.IntroSpec Katas.Hofs.LambdasSpec Katas.Hofs.FoldsSpec Katas.Hofs.ScansSpec Katas.Hofs.FunctionApplicationSpec Katas.Hofs.FunctionCompositionSpec Katas.Modules.IntroSpec Katas.Modules.ListFunctionsSpec Katas.Modules.CharFunctionsSpec Katas.Modules.MapFunctionalitySpec Katas.Modules.MapFunctionsSpec Katas.Modules.SetFunctionsSpec Katas.Fam.FunctorTypeClassSpec Katas.Exercises.RPNCalculatorSpec
+      Katas.Lists.ExtractingSpec Katas.Lists.ComprehensionsSpec Katas.Lists.RangesSpec Katas.Lists.TuplesSpec Katas.Types.IntroSpec Katas.Types.MakingTypesSpec Katas.Types.RecordSpec Katas.Types.TypeParametersSpec Katas.Types.DerivedInstancesSpec Katas.Types.MoreDerivedInstancesSpec Katas.Types.AliasingSpec Katas.Types.RecursiveDataStructuresSpec Katas.Types.MoreTypeClassesSpec Katas.Types.YesNoTypeClassSpec Katas.Flow.PatternMatchingSpec Katas.Flow.GuardsSpec Katas.Flow.WhereSpec Katas.Flow.LetItBeSpec Katas.Flow.CaseExpressionSpec Katas.Flow.RecursionsSpec Katas.Hofs.IntroSpec Katas.Hofs.LambdasSpec Katas.Hofs.FoldsSpec Katas.Hofs.ScansSpec Katas.Hofs.FunctionApplicationSpec Katas.Hofs.FunctionCompositionSpec Katas.Modules.IntroSpec Katas.Modules.ListFunctionsSpec Katas.Modules.CharFunctionsSpec Katas.Modules.MapFunctionalitySpec Katas.Modules.MapFunctionsSpec Katas.Modules.SetFunctionsSpec Katas.Fam.FunctorTypeClassSpec Katas.Fam.FmapFunctionCompositionSpec Katas.Exercises.RPNCalculatorSpec
   default-language: Haskell2010

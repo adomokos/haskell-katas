@@ -62,4 +62,5 @@ tests:
       Katas.Modules.MapFunctionsSpec
       Katas.Modules.SetFunctionsSpec
       Katas.Fam.FunctorTypeClassSpec
+      Katas.Fam.FmapFunctionCompositionSpec
       Katas.Exercises.RPNCalculatorSpec

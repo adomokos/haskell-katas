@@ -1,4 +1,4 @@
-module Katas.Fam.FunctorTypeClassSpec where
+module Katas.Fam.FunctorTypeClassSpec (spec) where
 
 import Test.Hspec
 import Test.QuickCheck
