@@ -34,6 +34,7 @@ import qualified Katas.Modules.MapFunctionsSpec
 import qualified Katas.Modules.SetFunctionsSpec
 import qualified Katas.Fam.FunctorTypeClassSpec
 import qualified Katas.Fam.FmapFunctionCompositionSpec
+import qualified Katas.Fam.FmapReplicateSpec
 import qualified Katas.Fam.FunctorLawsSpec
 import qualified Katas.Fam.ApplicativesSpec
 import qualified Katas.Fam.MoreApplicativesSpec
@@ -79,7 +80,8 @@ spec = do
     describe "33 - FAM - Functor Type Class" Katas.Fam.FunctorTypeClassSpec.spec
     describe "34 - Exercises - Reverse Polish Notation Calculator" Katas.Exercises.RPNCalculatorSpec.spec
     describe "35 - FAM - Fmap Function Composition" Katas.Fam.FmapFunctionCompositionSpec.spec
-    describe "36 - FAM - Functor Laws" Katas.Fam.FunctorLawsSpec.spec
-    describe "37 - FAM - Applicatives" Katas.Fam.ApplicativesSpec.spec
-    describe "38 - FAM - More Applicatives" Katas.Fam.MoreApplicativesSpec.spec
+    describe "36 - FAM - Fmap Replicate" Katas.Fam.FmapReplicateSpec.spec
+    describe "37 - FAM - Functor Laws" Katas.Fam.FunctorLawsSpec.spec
+    describe "38 - FAM - Applicatives" Katas.Fam.ApplicativesSpec.spec
+    describe "39 - FAM - More Applicatives" Katas.Fam.MoreApplicativesSpec.spec
 

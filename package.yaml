@@ -63,6 +63,7 @@ tests:
       Katas.Modules.SetFunctionsSpec
       Katas.Fam.FunctorTypeClassSpec
       Katas.Fam.FmapFunctionCompositionSpec
+      Katas.Fam.FmapReplicateSpec
       Katas.Fam.FunctorLawsSpec
       Katas.Fam.ApplicativesSpec
       Katas.Fam.MoreApplicativesSpec
