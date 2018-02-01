@@ -2,7 +2,6 @@ module Katas.Types.MoreDerivedInstancesSpec (spec) where
 
 import Test.Hspec
 import Test.QuickCheck
-import Control.Exception (evaluate)
 
 {- Day is an enumeration of each day in the week -}
 

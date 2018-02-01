@@ -2,7 +2,6 @@ module Katas.Types.RecursiveDataStructuresSpec (spec) where
 
 import Test.Hspec
 import Test.QuickCheck
-import Control.Exception (evaluate)
 
 {- Example 1 -}
 {- Define a list that uses Cons to add elements to the list -}

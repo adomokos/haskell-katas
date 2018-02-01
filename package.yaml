@@ -42,6 +42,7 @@ tests:
       Katas.Types.AliasingSpec
       Katas.Types.RecursiveDataStructuresSpec
       Katas.Types.MoreTypeClassesSpec
+      Katas.Types.YesNoTypeClassSpec
       Katas.Flow.PatternMatchingSpec
       Katas.Flow.GuardsSpec
       Katas.Flow.WhereSpec

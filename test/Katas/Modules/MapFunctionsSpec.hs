@@ -2,7 +2,6 @@ module Katas.Modules.MapFunctionsSpec (spec) where
 
 import Test.Hspec
 import Test.QuickCheck
-import Control.Exception (evaluate)
 import qualified Data.Map as Map
 import Data.Char
 
