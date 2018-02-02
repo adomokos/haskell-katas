@@ -72,5 +72,6 @@ tests:
       Katas.Fa.OrderingMonoidsSpec
       Katas.Fa.MaybeMonoidsSpec
       Katas.Fa.FoldableSpec
+      Katas.Monads.CalculateBirthYearSpec
       Katas.Exercises.RPNCalculatorSpec
       Katas.Exercises.LondonToHeathrowSpec

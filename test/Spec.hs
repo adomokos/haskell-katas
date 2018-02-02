@@ -43,6 +43,7 @@ import qualified Katas.Fa.MonoidsSpec
 import qualified Katas.Fa.OrderingMonoidsSpec
 import qualified Katas.Fa.MaybeMonoidsSpec
 import qualified Katas.Fa.FoldableSpec
+import qualified Katas.Monads.CalculateBirthYearSpec
 import qualified Katas.Exercises.RPNCalculatorSpec
 import qualified Katas.Exercises.LondonToHeathrowSpec
 
@@ -96,4 +97,5 @@ spec = do
     describe "43 - FA - Ordering Monoids" Katas.Fa.OrderingMonoidsSpec.spec
     describe "44 - FA - Maybe Monoids" Katas.Fa.MaybeMonoidsSpec.spec
     describe "45 - FA - Foldable" Katas.Fa.FoldableSpec.spec
+    describe "46 - Monads - Calculate Birth Year for 2020" Katas.Monads.CalculateBirthYearSpec.spec
 
