@@ -28,3 +28,4 @@ tests:
       - hspec == 2.*
       - QuickCheck
       - containers
+      - bytestring
