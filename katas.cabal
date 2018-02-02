@@ -2,7 +2,7 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: abbf814fbcfba270fb90f852f4a4d7f997242d941d038d59d3911ba65375f559
+-- hash: e75df653f8698cc005b154ce2d4f47789aabe2693661f1f90fd8d22eb6c039e2
 
 name:                katas
 version:             0.1.0.0
@@ -46,6 +46,7 @@ test-suite katas-test
     , containers
     , hspec ==2.*
   other-modules:
+      Katas.Exercises.KnightsQuestSpec
       Katas.Exercises.LondonToHeathrowSpec
       Katas.Exercises.RPNCalculatorSpec
       Katas.Fa.ApplicativesSpec

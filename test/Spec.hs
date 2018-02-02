@@ -53,6 +53,7 @@ import qualified Katas.Monads.ListMonadSpec
 import qualified Katas.Monads.MonadPlusSpec
 import qualified Katas.Exercises.RPNCalculatorSpec
 import qualified Katas.Exercises.LondonToHeathrowSpec
+import qualified Katas.Exercises.KnightsQuestSpec
 
 main :: IO ()
 main = hspec spec
@@ -112,3 +113,4 @@ spec = do
     describe "51 - Monads - Bird Landing with Do Notation" Katas.Monads.BirdLandingWithDoNotationSpec.spec
     describe "52 - Monads - List Monads" Katas.Monads.ListMonadSpec.spec
     describe "53 - Monads - Monad Plus" Katas.Monads.MonadPlusSpec.spec
+    describe "54 - Monads - Knight's Quest" Katas.Exercises.KnightsQuestSpec.spec
