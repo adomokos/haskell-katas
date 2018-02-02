@@ -1,4 +1,4 @@
-module Katas.Fam.FmapFunctionCompositionSpec (spec) where
+module Katas.Fa.FmapFunctionCompositionSpec (spec) where
 
 {-
     instance Functor ((->) r) where

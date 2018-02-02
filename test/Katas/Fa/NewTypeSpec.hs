@@ -1,4 +1,4 @@
-module Katas.Fam.NewTypeSpec (spec) where
+module Katas.Fa.NewTypeSpec (spec) where
 
 import Test.Hspec
 import Test.QuickCheck

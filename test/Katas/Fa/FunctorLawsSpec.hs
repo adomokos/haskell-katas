@@ -1,4 +1,4 @@
-module Katas.Fam.FunctorLawsSpec (spec) where
+module Katas.Fa.FunctorLawsSpec (spec) where
 
 import Test.Hspec
 import Test.QuickCheck

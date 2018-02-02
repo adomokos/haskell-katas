@@ -1,4 +1,4 @@
-module Katas.Fam.MoreApplicativesSpec (spec) where
+module Katas.Fa.MoreApplicativesSpec (spec) where
 
 import Test.Hspec
 import Test.QuickCheck

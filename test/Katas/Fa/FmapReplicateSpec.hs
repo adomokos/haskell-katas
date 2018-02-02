@@ -1,4 +1,4 @@
-module Katas.Fam.FmapReplicateSpec (spec) where
+module Katas.Fa.FmapReplicateSpec (spec) where
 
 import Test.Hspec
 import Test.QuickCheck

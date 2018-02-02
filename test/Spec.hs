@@ -32,17 +32,17 @@ import qualified Katas.Modules.CharFunctionsSpec
 import qualified Katas.Modules.MapFunctionalitySpec
 import qualified Katas.Modules.MapFunctionsSpec
 import qualified Katas.Modules.SetFunctionsSpec
-import qualified Katas.Fam.FunctorTypeClassSpec
-import qualified Katas.Fam.FmapFunctionCompositionSpec
-import qualified Katas.Fam.FmapReplicateSpec
-import qualified Katas.Fam.FunctorLawsSpec
-import qualified Katas.Fam.ApplicativesSpec
-import qualified Katas.Fam.MoreApplicativesSpec
-import qualified Katas.Fam.NewTypeSpec
-import qualified Katas.Fam.MonoidsSpec
-import qualified Katas.Fam.OrderingMonoidsSpec
-import qualified Katas.Fam.MaybeMonoidsSpec
-import qualified Katas.Fam.FoldableSpec
+import qualified Katas.Fa.FunctorTypeClassSpec
+import qualified Katas.Fa.FmapFunctionCompositionSpec
+import qualified Katas.Fa.FmapReplicateSpec
+import qualified Katas.Fa.FunctorLawsSpec
+import qualified Katas.Fa.ApplicativesSpec
+import qualified Katas.Fa.MoreApplicativesSpec
+import qualified Katas.Fa.NewTypeSpec
+import qualified Katas.Fa.MonoidsSpec
+import qualified Katas.Fa.OrderingMonoidsSpec
+import qualified Katas.Fa.MaybeMonoidsSpec
+import qualified Katas.Fa.FoldableSpec
 import qualified Katas.Exercises.RPNCalculatorSpec
 import qualified Katas.Exercises.LondonToHeathrowSpec
 
@@ -83,17 +83,17 @@ spec = do
     describe "30 - Types - Recursive Data Structures" Katas.Types.RecursiveDataStructuresSpec.spec
     describe "31 - Types - More Type Classes" Katas.Types.MoreTypeClassesSpec.spec
     describe "32 - Types - YesNo Type Class" Katas.Types.YesNoTypeClassSpec.spec
-    describe "33 - FAM - Functor Type Class" Katas.Fam.FunctorTypeClassSpec.spec
+    describe "33 - FAM - Functor Type Class" Katas.Fa.FunctorTypeClassSpec.spec
     describe "34 - Exercises - London to Heathrow" Katas.Exercises.LondonToHeathrowSpec.spec
     describe "35 - Exercises - Reverse Polish Notation Calculator" Katas.Exercises.RPNCalculatorSpec.spec
-    describe "36 - FAM - Fmap Function Composition" Katas.Fam.FmapFunctionCompositionSpec.spec
-    describe "37 - FAM - Fmap Replicate" Katas.Fam.FmapReplicateSpec.spec
-    describe "38 - FAM - Functor Laws" Katas.Fam.FunctorLawsSpec.spec
-    describe "39 - FAM - Applicatives" Katas.Fam.ApplicativesSpec.spec
-    describe "40 - FAM - More Applicatives" Katas.Fam.MoreApplicativesSpec.spec
-    describe "41 - FAM - New Type for fmap" Katas.Fam.NewTypeSpec.spec
-    describe "42 - FAM - Monoids" Katas.Fam.MonoidsSpec.spec
-    describe "43 - FAM - Ordering Monoids" Katas.Fam.OrderingMonoidsSpec.spec
-    describe "44 - FAM - Maybe Monoids" Katas.Fam.MaybeMonoidsSpec.spec
-    describe "45 - FAM - Foldable" Katas.Fam.FoldableSpec.spec
+    describe "36 - FA - Fmap Function Composition" Katas.Fa.FmapFunctionCompositionSpec.spec
+    describe "37 - FA - Fmap Replicate" Katas.Fa.FmapReplicateSpec.spec
+    describe "38 - FA - Functor Laws" Katas.Fa.FunctorLawsSpec.spec
+    describe "39 - FA - Applicatives" Katas.Fa.ApplicativesSpec.spec
+    describe "40 - FA - More Applicatives" Katas.Fa.MoreApplicativesSpec.spec
+    describe "41 - FA - New Type for fmap" Katas.Fa.NewTypeSpec.spec
+    describe "42 - FA - Monoids" Katas.Fa.MonoidsSpec.spec
+    describe "43 - FA - Ordering Monoids" Katas.Fa.OrderingMonoidsSpec.spec
+    describe "44 - FA - Maybe Monoids" Katas.Fa.MaybeMonoidsSpec.spec
+    describe "45 - FA - Foldable" Katas.Fa.FoldableSpec.spec
 

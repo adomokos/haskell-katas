@@ -61,16 +61,16 @@ tests:
       Katas.Modules.MapFunctionalitySpec
       Katas.Modules.MapFunctionsSpec
       Katas.Modules.SetFunctionsSpec
-      Katas.Fam.FunctorTypeClassSpec
-      Katas.Fam.FmapFunctionCompositionSpec
-      Katas.Fam.FmapReplicateSpec
-      Katas.Fam.FunctorLawsSpec
-      Katas.Fam.ApplicativesSpec
-      Katas.Fam.MoreApplicativesSpec
-      Katas.Fam.NewTypeSpec
-      Katas.Fam.MonoidsSpec
-      Katas.Fam.OrderingMonoidsSpec
-      Katas.Fam.MaybeMonoidsSpec
-      Katas.Fam.FoldableSpec
+      Katas.Fa.FunctorTypeClassSpec
+      Katas.Fa.FmapFunctionCompositionSpec
+      Katas.Fa.FmapReplicateSpec
+      Katas.Fa.FunctorLawsSpec
+      Katas.Fa.ApplicativesSpec
+      Katas.Fa.MoreApplicativesSpec
+      Katas.Fa.NewTypeSpec
+      Katas.Fa.MonoidsSpec
+      Katas.Fa.OrderingMonoidsSpec
+      Katas.Fa.MaybeMonoidsSpec
+      Katas.Fa.FoldableSpec
       Katas.Exercises.RPNCalculatorSpec
       Katas.Exercises.LondonToHeathrowSpec

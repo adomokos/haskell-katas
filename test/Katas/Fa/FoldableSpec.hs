@@ -1,4 +1,4 @@
-module Katas.Fam.FoldableSpec (spec) where
+module Katas.Fa.FoldableSpec (spec) where
 
 import Test.Hspec
 import Test.QuickCheck
