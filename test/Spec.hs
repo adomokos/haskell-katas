@@ -55,6 +55,8 @@ import qualified Katas.Monads.MonadLawsSpec
 import qualified Katas.Monads.IntroToWriteMonadSpec
 import qualified Katas.Monads.WriterTypeSpec
 import qualified Katas.Monads.LoggingWithWriterSpec
+import qualified Katas.Monads.ReaderSpec
+import qualified Katas.Monads.ReaderExampleSpec
 import qualified Katas.Exercises.RPNCalculatorSpec
 import qualified Katas.Exercises.LondonToHeathrowSpec
 import qualified Katas.Exercises.KnightsQuestSpec
@@ -122,3 +124,5 @@ spec = do
     describe "56 - Monads - Intro to Write Monad" Katas.Monads.IntroToWriteMonadSpec.spec
     describe "57 - Monads - Writer Type" Katas.Monads.WriterTypeSpec.spec
     describe "58 - Monads - Logging with Writer" Katas.Monads.LoggingWithWriterSpec.spec
+    describe "59 - Monads - Reader" Katas.Monads.ReaderSpec.spec
+    describe "60 - Monads - Reader Example" Katas.Monads.ReaderExampleSpec.spec

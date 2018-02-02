@@ -2,7 +2,7 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: f924d1727e4a1dbf14f47443908090892450b2066773a68ead6b2283717492e7
+-- hash: 44ecc8f7957a7aa3deb0bd508458360fe5d6e00d69b951188576145adb603587
 
 name:                katas
 version:             0.1.0.0
@@ -95,6 +95,8 @@ test-suite katas-test
       Katas.Monads.LoggingWithWriterSpec
       Katas.Monads.MonadLawsSpec
       Katas.Monads.MonadPlusSpec
+      Katas.Monads.ReaderExampleSpec
+      Katas.Monads.ReaderSpec
       Katas.Monads.WriterTypeSpec
       Katas.Types.AliasingSpec
       Katas.Types.DerivedInstancesSpec
