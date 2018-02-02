@@ -101,5 +101,5 @@ spec = do
     describe "45 - FA - Foldable" Katas.Fa.FoldableSpec.spec
     describe "46 - Monads - Calculate Birth Year for 2020" Katas.Monads.CalculateBirthYearSpec.spec
     describe "47 - Monads - Calculate Age from Dates" Katas.Monads.CalculateAgeFromDatesSpec.spec
-    describe "47 - Monads - Intro" Katas.Monads.IntroSpec.spec
+    describe "48 - Monads - Intro" Katas.Monads.IntroSpec.spec
 
