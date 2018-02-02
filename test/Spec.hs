@@ -49,6 +49,7 @@ import qualified Katas.Monads.IntroSpec
 import qualified Katas.Monads.BirdLandingSpec
 import qualified Katas.Monads.DoNotationSpec
 import qualified Katas.Monads.BirdLandingWithDoNotationSpec
+import qualified Katas.Monads.ListMonadSpec
 import qualified Katas.Exercises.RPNCalculatorSpec
 import qualified Katas.Exercises.LondonToHeathrowSpec
 
@@ -108,3 +109,4 @@ spec = do
     describe "49 - Monads - Bird Landing" Katas.Monads.BirdLandingSpec.spec
     describe "50 - Monads - Do Notation" Katas.Monads.DoNotationSpec.spec
     describe "51 - Monads - Bird Landing with Do Notation" Katas.Monads.BirdLandingWithDoNotationSpec.spec
+    describe "52 - Monads - List Monads" Katas.Monads.ListMonadSpec.spec

@@ -2,7 +2,7 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 95cb56566572e10fe13eb5a579de91645e3dfb32f4dc7e1b45fc65d164f4b674
+-- hash: 73ef21bd4c9ccf83ec69ea99a298668d2001810d9d3005f207d58063da14389c
 
 name:                katas
 version:             0.1.0.0
@@ -87,6 +87,7 @@ test-suite katas-test
       Katas.Monads.CalculateBirthYearSpec
       Katas.Monads.DoNotationSpec
       Katas.Monads.IntroSpec
+      Katas.Monads.ListMonadSpec
       Katas.Types.AliasingSpec
       Katas.Types.DerivedInstancesSpec
       Katas.Types.IntroSpec
