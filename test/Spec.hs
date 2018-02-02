@@ -107,4 +107,4 @@ spec = do
     describe "48 - Monads - Intro" Katas.Monads.IntroSpec.spec
     describe "49 - Monads - Bird Landing" Katas.Monads.BirdLandingSpec.spec
     describe "50 - Monads - Do Notation" Katas.Monads.DoNotationSpec.spec
-    describe "50 - Monads - Bird Landing with Do Notation" Katas.Monads.BirdLandingWithDoNotationSpec.spec
+    describe "51 - Monads - Bird Landing with Do Notation" Katas.Monads.BirdLandingWithDoNotationSpec.spec
