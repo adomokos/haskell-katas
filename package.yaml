@@ -73,5 +73,6 @@ tests:
       Katas.Fa.MaybeMonoidsSpec
       Katas.Fa.FoldableSpec
       Katas.Monads.CalculateBirthYearSpec
+      Katas.Monads.CalculateAgeFromDatesSpec
       Katas.Exercises.RPNCalculatorSpec
       Katas.Exercises.LondonToHeathrowSpec
