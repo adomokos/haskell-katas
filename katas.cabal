@@ -2,7 +2,7 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: c0441f44a6bee6a666b47d7c085c84f18813307abccca26797f2e56972c12b38
+-- hash: dec13fab1778918b95711dab250d6c03a3504bfabff17a5c3012fce54cbb04ab
 
 name:                katas
 version:             0.1.0.0
@@ -81,6 +81,7 @@ test-suite katas-test
       Katas.Modules.MapFunctionalitySpec
       Katas.Modules.MapFunctionsSpec
       Katas.Modules.SetFunctionsSpec
+      Katas.Monads.BirdLandingSpec
       Katas.Monads.CalculateAgeFromDatesSpec
       Katas.Monads.CalculateBirthYearSpec
       Katas.Monads.IntroSpec

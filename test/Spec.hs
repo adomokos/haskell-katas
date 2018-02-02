@@ -46,6 +46,7 @@ import qualified Katas.Fa.FoldableSpec
 import qualified Katas.Monads.CalculateBirthYearSpec
 import qualified Katas.Monads.CalculateAgeFromDatesSpec
 import qualified Katas.Monads.IntroSpec
+import qualified Katas.Monads.BirdLandingSpec
 import qualified Katas.Exercises.RPNCalculatorSpec
 import qualified Katas.Exercises.LondonToHeathrowSpec
 
@@ -102,4 +103,4 @@ spec = do
     describe "46 - Monads - Calculate Birth Year for 2020" Katas.Monads.CalculateBirthYearSpec.spec
     describe "47 - Monads - Calculate Age from Dates" Katas.Monads.CalculateAgeFromDatesSpec.spec
     describe "48 - Monads - Intro" Katas.Monads.IntroSpec.spec
-
+    describe "49 - Monads - Bird Landing" Katas.Monads.BirdLandingSpec.spec
