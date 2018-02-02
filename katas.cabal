@@ -2,7 +2,7 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 97770cf0f15b283cc0e624839b97e0aa0c4c7f3e00a064a2216431213a791fe0
+-- hash: 910a0e0ed4e1031f03a2c2c1f2b60c7af3545f1648b861c34076e3aa9374ce6c
 
 name:                katas
 version:             0.1.0.0
@@ -46,6 +46,7 @@ test-suite katas-test
     , bytestring
     , containers
     , hspec ==2.*
+    , mtl
   other-modules:
       Katas.Exercises.KnightsQuestSpec
       Katas.Exercises.LondonToHeathrowSpec
@@ -93,6 +94,7 @@ test-suite katas-test
       Katas.Monads.ListMonadSpec
       Katas.Monads.MonadLawsSpec
       Katas.Monads.MonadPlusSpec
+      Katas.Monads.WriterTypeSpec
       Katas.Types.AliasingSpec
       Katas.Types.DerivedInstancesSpec
       Katas.Types.IntroSpec
