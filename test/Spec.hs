@@ -84,16 +84,16 @@ spec = do
     describe "31 - Types - More Type Classes" Katas.Types.MoreTypeClassesSpec.spec
     describe "32 - Types - YesNo Type Class" Katas.Types.YesNoTypeClassSpec.spec
     describe "33 - FAM - Functor Type Class" Katas.Fam.FunctorTypeClassSpec.spec
-    describe "34 - Exercises - Reverse Polish Notation Calculator" Katas.Exercises.RPNCalculatorSpec.spec
-    describe "35 - FAM - Fmap Function Composition" Katas.Fam.FmapFunctionCompositionSpec.spec
-    describe "36 - FAM - Fmap Replicate" Katas.Fam.FmapReplicateSpec.spec
-    describe "37 - FAM - Functor Laws" Katas.Fam.FunctorLawsSpec.spec
-    describe "38 - FAM - Applicatives" Katas.Fam.ApplicativesSpec.spec
-    describe "39 - FAM - More Applicatives" Katas.Fam.MoreApplicativesSpec.spec
-    describe "40 - FAM - New Type for fmap" Katas.Fam.NewTypeSpec.spec
-    describe "41 - FAM - Monoids" Katas.Fam.MonoidsSpec.spec
-    describe "42 - FAM - Ordering Monoids" Katas.Fam.OrderingMonoidsSpec.spec
-    describe "43 - FAM - Maybe Monoids" Katas.Fam.MaybeMonoidsSpec.spec
-    describe "44 - FAM - Foldable" Katas.Fam.FoldableSpec.spec
-    describe "45 - Exercises - London to Heathrow" Katas.Exercises.LondonToHeathrowSpec.spec
+    describe "34 - Exercises - London to Heathrow" Katas.Exercises.LondonToHeathrowSpec.spec
+    describe "35 - Exercises - Reverse Polish Notation Calculator" Katas.Exercises.RPNCalculatorSpec.spec
+    describe "36 - FAM - Fmap Function Composition" Katas.Fam.FmapFunctionCompositionSpec.spec
+    describe "37 - FAM - Fmap Replicate" Katas.Fam.FmapReplicateSpec.spec
+    describe "38 - FAM - Functor Laws" Katas.Fam.FunctorLawsSpec.spec
+    describe "39 - FAM - Applicatives" Katas.Fam.ApplicativesSpec.spec
+    describe "40 - FAM - More Applicatives" Katas.Fam.MoreApplicativesSpec.spec
+    describe "41 - FAM - New Type for fmap" Katas.Fam.NewTypeSpec.spec
+    describe "42 - FAM - Monoids" Katas.Fam.MonoidsSpec.spec
+    describe "43 - FAM - Ordering Monoids" Katas.Fam.OrderingMonoidsSpec.spec
+    describe "44 - FAM - Maybe Monoids" Katas.Fam.MaybeMonoidsSpec.spec
+    describe "45 - FAM - Foldable" Katas.Fam.FoldableSpec.spec
 
