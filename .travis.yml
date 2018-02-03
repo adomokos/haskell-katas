@@ -10,6 +10,11 @@ matrix:
     - env: CABALVER=1.24 GHCVER=8.0.2
       addons: {apt: {packages: [cabal-install-1.24,ghc-8.0.2],sources: [hvr-ghc]}}
 
+branches:
+  only:
+    - master
+    - solutions
+
 before_install:
 - mkdir -p ~/.local/bin
 - export PATH=~/.local/bin:$PATH
@@ -21,4 +26,4 @@ install:
 
 script:
 # Build the package, its tests, and its docs and run the tests
-- stack --no-terminal test --haddock --no-haddock-deps
+- make test
