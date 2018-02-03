@@ -15,7 +15,6 @@ before_install:
 - export PATH=~/.local/bin:$PATH
 - travis_retry curl -L https://www.stackage.org/stack/linux-x86_64 | tar -xzO --wildcards '*/stack' > ~/.local/bin/stack
 - chmod a+x ~/.local/bin/stack
-- make build-db
 
 install:
 - stack --no-terminal --install-ghc test --only-dependencies
