@@ -66,7 +66,7 @@ main = hspec spec
 
 spec :: Spec
 spec = do
-    describe "01 - Extraxting Lists" Katas.Lists.ExtractingSpec.spec
+    describe "01 - Extracting Lists" Katas.Lists.ExtractingSpec.spec
     describe "02 - List Comprehensions" Katas.Lists.ComprehensionsSpec.spec
     describe "03 - Ranges" Katas.Lists.RangesSpec.spec
     describe "04 - Tuples" Katas.Lists.TuplesSpec.spec
