@@ -7,6 +7,9 @@ import Test.QuickCheck
 
 {- solveRPN :: (Num a, Read a) => String -> a -}
 
+main :: IO ()
+main = hspec spec
+
 spec :: Spec
 spec = do
     describe "reverse polish notation" $ do
