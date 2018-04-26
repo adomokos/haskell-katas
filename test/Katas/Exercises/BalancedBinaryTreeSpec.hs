@@ -24,6 +24,8 @@ tree = Node 20
            (Node 30
                (Node 22 Leaf Leaf)
                (Node 35 Leaf Leaf))
+
+invalidTree :: Tree Int
 invalidTree = Node 20
             (Node 10
                 (Node 5 Leaf Leaf)
@@ -33,28 +35,24 @@ invalidTree = Node 20
                 (Node 35 Leaf Leaf))
 
 allNodes :: (Int -> Bool) -> Tree Int -> Bool
-allNodes _ Leaf = True
-allNodes f (Node n left right) = f n && allNodes f left && allNodes f right
+allNodes _ _ = False
 
 isBalanced :: Tree Int -> Bool
-isBalanced tree =
-    all (==True) (balanced tree)
+isBalanced tree = False
 
-balanced :: Tree Int -> [Bool]
-balanced (Node x Leaf Leaf) = [True]
-balanced (Node x left right) =
-    let balancedValue = allNodes (<x) left && allNodes (>x) right
-     in balancedValue : (balanced left ++ balanced right)
 
 spec :: Spec
 spec =
     describe "Balanced" $ do
         it "can tell if everything on the left is lower" $ do
+            pending
             let (Node x left right) = tree
             allNodes (<x) left `shouldBe` True
         it "can tell if everything on the right is higher" $ do
+            pending
             let (Node x left right) = tree
             allNodes (>x) right `shouldBe` True
         it "can tell if a tree is balanced" $ do
+            pending
             isBalanced tree `shouldBe` True
             isBalanced invalidTree `shouldBe` False
