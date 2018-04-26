@@ -8,16 +8,13 @@ import Control.Monad.State
 type Stack = [Int]
 
 pop :: Stack -> (Int, Stack)
-pop (x:xs) = (x,xs)
+pop (x:xs) = undefined
 
 push :: Int -> Stack -> ((), Stack)
-push a xs = ((),a:xs)
+push a xs = undefined
 
 stackManip :: Stack -> (Int, Stack)
-stackManip stack = let
-    ((), newStack1) = push 3 stack
-    (a, newStack2) = pop newStack1
-    in pop newStack2
+stackManip stack = undefined
 
 {-
     Managing the state by ourselves is tedious.
@@ -40,34 +37,24 @@ stackManip stack = let
 -}
 
 pop' :: State Stack Int
-pop' = state $ \(x:xs) -> (x, xs)
+pop' = undefined
 
 push' :: Int -> State Stack ()
-push' a = state $ \xs -> ((),a:xs)
+push' _ = undefined
 
 stackManip' :: State Stack Int
 {- stackManip' = do -}
     {- push' 3 -}
     {- pop' -}
     {- pop' -}
-stackManip' = return [] >> push' 3 >> pop' >> pop'
+stackManip' = undefined
 
 
 stackStuff :: State Stack ()
-stackStuff = do
-    a <- pop'
-    if a == 5
-       then push' 5
-       else do
-           push' 3
-           push' 8
+stackStuff = undefined
 
 moreStack :: State Stack ()
-moreStack = do
-    a <- stackManip'
-    if a == 100
-       then stackStuff
-       else return ()
+moreStack = undefined
 
 main :: IO ()
 main = hspec spec
@@ -76,11 +63,15 @@ spec :: Spec
 spec =
     describe "Stateful Computations" $ do
         it "can operate on a stack" $
-            stackManip [5,8,2,1] `shouldBe` (5,[8,2,1])
+            pending
+            {- stackManip [5,8,2,1] `shouldBe` (5,[8,2,1]) -}
         it "can operate with State on stack" $
-            runState stackManip' [5,8,2,1] `shouldBe` (5,[8,2,1])
+            pending
+            {- runState stackManip' [5,8,2,1] `shouldBe` (5,[8,2,1]) -}
         it "can run conditional logic with Monads"$ do
-            runState stackStuff [9,0,2,1,0] `shouldBe` ((),[8,3,0,2,1,0])
-            runState stackStuff [5,0,2,1,0] `shouldBe` ((),[5,0,2,1,0])
+            pending
+            {- runState stackStuff [9,0,2,1,0] `shouldBe` ((),[8,3,0,2,1,0]) -}
+            {- runState stackStuff [5,0,2,1,0] `shouldBe` ((),[5,0,2,1,0]) -}
         it "can weave other functions with State" $
-            runState moreStack [5,8,2,1] `shouldBe` ((),[8,2,1])
+            pending
+            {- runState moreStack [5,8,2,1] `shouldBe` ((),[8,2,1]) -}
