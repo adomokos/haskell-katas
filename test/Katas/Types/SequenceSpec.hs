@@ -12,19 +12,23 @@ spec :: Spec
 spec =
     describe "Sequence" $ do
         it "can initialize singleton Seq" $
-            Seq.singleton 1 `shouldBe` Seq.fromList [1]
+            pending
+            {- ___ 1 `shouldBe` Seq.fromList [1] -}
         it "can append and prepend" $ do
-            1 <| Seq.singleton 2
-                `shouldBe` Seq.fromList [1,2]
-            Seq.singleton 1 |> 2
-                `shouldBe` Seq.fromList [1,2]
+            pending
+            {- 1 ___ Seq.singleton 2 -}
+                {- `shouldBe` Seq.fromList [1,2] -}
+            {- Seq.singleton 1 ___ ___ -}
+                {- `shouldBe` Seq.fromList [1,2] -}
         it "can combine two" $ do
-            let left = Seq.fromList [1,3,3]
-            let right = Seq.fromList [7,1]
-            left >< right
-                `shouldBe` Seq.fromList [1,3,3,7,1]
+            pending
+            {- let left = Seq.fromList [1,3,3] -}
+            {- let right = Seq.fromList [7,1] -}
+            {- left ___ right -}
+                {- `shouldBe` Seq.fromList [1,3,3,7,1] -}
         it "can convert a sequence to a List" $ do
-            let list = Foldable.toList (Seq.fromList [1,2,3])
-            list `shouldBe` [1,2,3]
-            let result = Foldable.foldl' (+) 0 (Seq.fromList [1,2,3])
-            result `shouldBe` 6
+            pending
+            {- let list = Foldable.___ (Seq.fromList [1,2,3]) -}
+            {- list `shouldBe` [1,2,3] -}
+            {- let result = Foldable.___ (+) 0 (Seq.fromList [1,2,3]) -}
+            {- result `shouldBe` 6 -}
