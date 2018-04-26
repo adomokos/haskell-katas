@@ -2,7 +2,7 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 44ecc8f7957a7aa3deb0bd508458360fe5d6e00d69b951188576145adb603587
+-- hash: 71183eed1d44376eaa3910e28380a98f6914bbdf366339dd3e95550a6e03c9df
 
 name:                katas
 version:             0.1.0.0
@@ -48,8 +48,10 @@ test-suite katas-test
     , hspec ==2.*
     , mtl
   other-modules:
+      Katas.Exercises.BalancedBinaryTreeSpec
       Katas.Exercises.KnightsQuestSpec
       Katas.Exercises.LondonToHeathrowSpec
+      Katas.Exercises.PhoneNumberCleanerSpec
       Katas.Exercises.RPNCalculatorSpec
       Katas.Fa.ApplicativesSpec
       Katas.Fa.FmapFunctionCompositionSpec
@@ -60,6 +62,7 @@ test-suite katas-test
       Katas.Fa.MaybeMonoidsSpec
       Katas.Fa.MonoidsSpec
       Katas.Fa.MoreApplicativesSpec
+      Katas.Fa.NewTypeMonoidSpec
       Katas.Fa.NewTypeSpec
       Katas.Fa.OrderingMonoidsSpec
       Katas.Flow.CaseExpressionSpec
@@ -97,6 +100,7 @@ test-suite katas-test
       Katas.Monads.MonadPlusSpec
       Katas.Monads.ReaderExampleSpec
       Katas.Monads.ReaderSpec
+      Katas.Monads.StatefulComputationsSpec
       Katas.Monads.WriterTypeSpec
       Katas.Types.AliasingSpec
       Katas.Types.DerivedInstancesSpec
@@ -106,6 +110,7 @@ test-suite katas-test
       Katas.Types.MoreTypeClassesSpec
       Katas.Types.RecordSpec
       Katas.Types.RecursiveDataStructuresSpec
+      Katas.Types.SequenceSpec
       Katas.Types.TypeParametersSpec
       Katas.Types.YesNoTypeClassSpec
       Paths_katas

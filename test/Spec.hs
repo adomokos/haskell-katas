@@ -14,6 +14,7 @@ import qualified Katas.Types.AliasingSpec
 import qualified Katas.Types.RecursiveDataStructuresSpec
 import qualified Katas.Types.MoreTypeClassesSpec
 import qualified Katas.Types.YesNoTypeClassSpec
+import qualified Katas.Types.SequenceSpec
 import qualified Katas.Flow.PatternMatchingSpec
 import qualified Katas.Flow.GuardsSpec
 import qualified Katas.Flow.WhereSpec
@@ -42,6 +43,7 @@ import qualified Katas.Fa.NewTypeSpec
 import qualified Katas.Fa.MonoidsSpec
 import qualified Katas.Fa.OrderingMonoidsSpec
 import qualified Katas.Fa.MaybeMonoidsSpec
+import qualified Katas.Fa.NewTypeMonoidSpec
 import qualified Katas.Fa.FoldableSpec
 import qualified Katas.Monads.CalculateBirthYearSpec
 import qualified Katas.Monads.CalculateAgeFromDatesSpec
@@ -57,9 +59,12 @@ import qualified Katas.Monads.WriterTypeSpec
 import qualified Katas.Monads.LoggingWithWriterSpec
 import qualified Katas.Monads.ReaderSpec
 import qualified Katas.Monads.ReaderExampleSpec
+import qualified Katas.Monads.StatefulComputationsSpec
 import qualified Katas.Exercises.RPNCalculatorSpec
 import qualified Katas.Exercises.LondonToHeathrowSpec
 import qualified Katas.Exercises.KnightsQuestSpec
+import qualified Katas.Exercises.PhoneNumberCleanerSpec
+import qualified Katas.Exercises.BalancedBinaryTreeSpec
 
 main :: IO ()
 main = hspec spec
@@ -98,31 +103,36 @@ spec = do
     describe "30 - Types - Recursive Data Structures" Katas.Types.RecursiveDataStructuresSpec.spec
     describe "31 - Types - More Type Classes" Katas.Types.MoreTypeClassesSpec.spec
     describe "32 - Types - YesNo Type Class" Katas.Types.YesNoTypeClassSpec.spec
-    describe "33 - FAM - Functor Type Class" Katas.Fa.FunctorTypeClassSpec.spec
-    describe "34 - Exercises - London to Heathrow" Katas.Exercises.LondonToHeathrowSpec.spec
-    describe "35 - Exercises - Reverse Polish Notation Calculator" Katas.Exercises.RPNCalculatorSpec.spec
-    describe "36 - FA - Fmap Function Composition" Katas.Fa.FmapFunctionCompositionSpec.spec
-    describe "37 - FA - Fmap Replicate" Katas.Fa.FmapReplicateSpec.spec
-    describe "38 - FA - Functor Laws" Katas.Fa.FunctorLawsSpec.spec
-    describe "39 - FA - Applicatives" Katas.Fa.ApplicativesSpec.spec
-    describe "40 - FA - More Applicatives" Katas.Fa.MoreApplicativesSpec.spec
-    describe "41 - FA - New Type for fmap" Katas.Fa.NewTypeSpec.spec
-    describe "42 - FA - Monoids" Katas.Fa.MonoidsSpec.spec
-    describe "43 - FA - Ordering Monoids" Katas.Fa.OrderingMonoidsSpec.spec
-    describe "44 - FA - Maybe Monoids" Katas.Fa.MaybeMonoidsSpec.spec
-    describe "45 - FA - Foldable" Katas.Fa.FoldableSpec.spec
-    describe "46 - Monads - Calculate Birth Year for 2020" Katas.Monads.CalculateBirthYearSpec.spec
-    describe "47 - Monads - Calculate Age from Dates" Katas.Monads.CalculateAgeFromDatesSpec.spec
-    describe "48 - Monads - Intro" Katas.Monads.IntroSpec.spec
-    describe "49 - Monads - Bird Landing" Katas.Monads.BirdLandingSpec.spec
-    describe "50 - Monads - Do Notation" Katas.Monads.DoNotationSpec.spec
-    describe "51 - Monads - Bird Landing with Do Notation" Katas.Monads.BirdLandingWithDoNotationSpec.spec
-    describe "52 - Monads - List Monads" Katas.Monads.ListMonadSpec.spec
-    describe "53 - Monads - Monad Plus" Katas.Monads.MonadPlusSpec.spec
-    describe "54 - Monads - Knight's Quest" Katas.Exercises.KnightsQuestSpec.spec
-    describe "55 - Monads - Laws" Katas.Monads.MonadLawsSpec.spec
-    describe "56 - Monads - Intro to Write Monad" Katas.Monads.IntroToWriteMonadSpec.spec
-    describe "57 - Monads - Writer Type" Katas.Monads.WriterTypeSpec.spec
-    describe "58 - Monads - Logging with Writer" Katas.Monads.LoggingWithWriterSpec.spec
-    describe "59 - Monads - Reader" Katas.Monads.ReaderSpec.spec
-    describe "60 - Monads - Reader Example" Katas.Monads.ReaderExampleSpec.spec
+    describe "33 - Types - Sequences" Katas.Types.SequenceSpec.spec
+    describe "34 - FA - Functor Type Class" Katas.Fa.FunctorTypeClassSpec.spec
+    describe "35 - Exercises - London to Heathrow" Katas.Exercises.LondonToHeathrowSpec.spec
+    describe "36 - Exercises - Reverse Polish Notation Calculator" Katas.Exercises.RPNCalculatorSpec.spec
+    describe "37 - Exercises - Phone Number Cleaner" Katas.Exercises.PhoneNumberCleanerSpec.spec
+    describe "38 - FA - Fmap Function Composition" Katas.Fa.FmapFunctionCompositionSpec.spec
+    describe "39 - FA - Fmap Replicate" Katas.Fa.FmapReplicateSpec.spec
+    describe "40 - FA - Functor Laws" Katas.Fa.FunctorLawsSpec.spec
+    describe "41 - FA - Applicatives" Katas.Fa.ApplicativesSpec.spec
+    describe "42 - FA - More Applicatives" Katas.Fa.MoreApplicativesSpec.spec
+    describe "43 - FA - New Type for fmap" Katas.Fa.NewTypeSpec.spec
+    describe "44 - FA - Monoids" Katas.Fa.MonoidsSpec.spec
+    describe "45 - FA - Ordering Monoids" Katas.Fa.OrderingMonoidsSpec.spec
+    describe "46 - FA - Maybe Monoids" Katas.Fa.MaybeMonoidsSpec.spec
+    describe "47 - FA - NewType Monoids" Katas.Fa.NewTypeMonoidSpec.spec
+    describe "48 - FA - Foldable" Katas.Fa.FoldableSpec.spec
+    describe "49 - Monads - Calculate Birth Year for 2020" Katas.Monads.CalculateBirthYearSpec.spec
+    describe "50 - Monads - Calculate Age from Dates" Katas.Monads.CalculateAgeFromDatesSpec.spec
+    describe "51 - Monads - Intro" Katas.Monads.IntroSpec.spec
+    describe "52 - Monads - Bird Landing" Katas.Monads.BirdLandingSpec.spec
+    describe "53 - Monads - Do Notation" Katas.Monads.DoNotationSpec.spec
+    describe "54 - Monads - Bird Landing with Do Notation" Katas.Monads.BirdLandingWithDoNotationSpec.spec
+    describe "55 - Monads - List Monads" Katas.Monads.ListMonadSpec.spec
+    describe "56 - Monads - Monad Plus" Katas.Monads.MonadPlusSpec.spec
+    describe "57 - Monads - Knight's Quest" Katas.Exercises.KnightsQuestSpec.spec
+    describe "58 - Monads - Laws" Katas.Monads.MonadLawsSpec.spec
+    describe "59 - Monads - Intro to Write Monad" Katas.Monads.IntroToWriteMonadSpec.spec
+    describe "60 - Monads - Writer Type" Katas.Monads.WriterTypeSpec.spec
+    describe "61 - Monads - Logging with Writer" Katas.Monads.LoggingWithWriterSpec.spec
+    describe "62 - Monads - Reader" Katas.Monads.ReaderSpec.spec
+    describe "63 - Monads - Reader Example" Katas.Monads.ReaderExampleSpec.spec
+    describe "64 - Monads - Stateful Computations" Katas.Monads.StatefulComputationsSpec.spec
+    describe "65 - Exercices - Balanced Binary Tree Check" Katas.Exercises.BalancedBinaryTreeSpec.spec
