@@ -3,6 +3,9 @@ module Katas.Lists.ExtractingSpec (spec) where
 import Test.Hspec
 import Test.QuickCheck
 
+main :: IO ()
+main = hspec spec
+
 spec :: Spec
 spec = do
   describe "Extracting Portion of List" $ do
