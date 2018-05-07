@@ -3,6 +3,9 @@ module Katas.Lists.ComprehensionsSpec (spec) where
 import Test.Hspec
 import Test.QuickCheck
 
+main :: IO ()
+main = hspec spec
+
 spec :: Spec
 spec = do
     describe "List Comprehensions" $ do

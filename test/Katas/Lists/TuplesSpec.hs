@@ -3,6 +3,9 @@ module Katas.Lists.TuplesSpec (spec) where
 import Test.Hspec
 import Test.QuickCheck
 
+main :: IO ()
+main = hspec spec
+
 spec :: Spec
 spec = do
     describe "tuples" $ do

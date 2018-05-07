@@ -3,6 +3,9 @@ module Katas.Flow.PatternMatchingSpec (spec) where
 import Test.Hspec
 import Test.QuickCheck
 
+main :: IO ()
+main = hspec spec
+
 spec :: Spec
 spec = do
     describe "Pattern matching" $ do

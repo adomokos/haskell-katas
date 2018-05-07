@@ -3,6 +3,9 @@ module Katas.Lists.RangesSpec (spec) where
 import Test.Hspec
 import Test.QuickCheck
 
+main :: IO ()
+main = hspec spec
+
 spec :: Spec
 spec = do
     describe "ranges" $ do

@@ -3,6 +3,8 @@ module Katas.Types.IntroSpec (spec) where
 import Test.Hspec
 import Test.QuickCheck
 
+main :: IO ()
+main = hspec spec
 {- Create the `removeNonUppercase` function with proper type -}
 
 {- Create the addThree function with proper type info -}
