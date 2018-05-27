@@ -21,6 +21,9 @@ import Data.Monoid
 -- Compare length, vowels (aeiou) and strings in this order
 -- lengthVowelCompare :: String -> String -> Ordering
 
+main :: IO ()
+main = hspec spec
+
 spec :: Spec
 spec = do
     describe "Monoids" $ do
