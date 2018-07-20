@@ -3,6 +3,9 @@ module Katas.Fa.FunctorTypeClassSpec (spec) where
 import Test.Hspec
 import Test.QuickCheck
 
+main :: IO ()
+main = hspec spec
+
 {-
     Functor typeclass is for things that can be mapped over.
     This is how it's implemented:
