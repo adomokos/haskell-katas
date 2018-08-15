@@ -1,5 +1,11 @@
 module Katas.Monads.IntroSpec (spec) where
 
+import Test.Hspec
+import Test.QuickCheck
+
+main :: IO ()
+main = hspec spec
+
 {-
    Monads are just beefed up applicative functors, much like
    applicative functors are only beefed up functors.
@@ -12,14 +18,8 @@ module Katas.Monads.IntroSpec (spec) where
    the monadic value.
 -}
 
-import Test.Hspec
-import Test.QuickCheck
-
 -- Let's not use >>=, create an applyMaybe fn
 {- applyMaybe :: Maybe a -> (a -> Maybe b) -> Maybe b -}
-
-main :: IO ()
-main = hspec spec
 
 spec :: Spec
 spec = do

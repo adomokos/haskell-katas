@@ -3,6 +3,8 @@ module Katas.Monads.DoNotationSpec (spec) where
 import Test.Hspec
 import Test.QuickCheck
 
+main :: IO ()
+main = hspec spec
 
 {- foo :: Maybe String -}
 {- foo = ___   >>= (\x -> -}
@@ -14,9 +16,6 @@ import Test.QuickCheck
 
 -- Use do expression here as well
 {- marySue :: Maybe Bool -}
-
-main :: IO ()
-main = hspec spec
 
 spec :: Spec
 spec = do

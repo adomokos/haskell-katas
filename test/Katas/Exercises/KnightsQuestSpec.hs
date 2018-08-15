@@ -5,6 +5,9 @@ import Test.QuickCheck
 import Control.Exception (evaluate)
 import Control.Monad
 
+main :: IO ()
+main = hspec spec
+
 type KnightPos = (Int, Int)
 
 {-
@@ -18,9 +21,6 @@ type KnightPos = (Int, Int)
 {- in3 :: KnightPos -> [KnightPos] -}
 
 {- canReachIn3 :: KnightPos -> KnightPos -> Bool -}
-
-main :: IO ()
-main = hspec spec
 
 spec :: Spec
 spec = do

@@ -3,6 +3,9 @@ module Katas.Flow.GuardsSpec (spec) where
 import Test.Hspec
 import Test.QuickCheck
 
+main :: IO ()
+main = hspec spec
+
 {- BMI boundaries are 18.5, 25, 30 -}
 {- bmiTell :: (Ord a, Fractional a) => a -> String -}
 

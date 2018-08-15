@@ -6,6 +6,9 @@ import Test.QuickCheck
 -- https://blog.ssanj.net/posts/2014-09-23-A-Simple-Reader-Monad-Example.html
 import Control.Monad.Reader
 
+main :: IO ()
+main = hspec spec
+
 -- get the env from the Reader
 -- return the env and " This is Tom."
 {- tom :: Reader String String -}
@@ -19,9 +22,6 @@ import Control.Monad.Reader
 
 -- entry function, call it with "Who is this?"
 {- runJerryRun :: String -}
-
-main :: IO ()
-main = hspec spec
 
 spec :: Spec
 spec = do

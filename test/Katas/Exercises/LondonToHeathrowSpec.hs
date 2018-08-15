@@ -4,6 +4,9 @@ import Test.Hspec
 import Test.QuickCheck
 import Control.Exception (evaluate)
 
+main :: IO ()
+main = hspec spec
+
 -- data Node = Node Road Road | EndNode Road
 -- data Road = Road Int Node
 data Section = Section { getA :: Int, getB :: Int,
@@ -28,9 +31,6 @@ heathrowToLondon = [Section 50 10 30,
        30      20      25      0
  B 10 (B1) 90 (B2)  2 (B3)  8 (B4)
 -}
-
-main :: IO ()
-main = hspec spec
 
 spec :: Spec
 spec = do

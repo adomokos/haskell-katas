@@ -3,6 +3,9 @@ module Katas.Types.RecordSpec (spec) where
 import Test.Hspec
 import Test.QuickCheck
 
+main :: IO ()
+main = hspec spec
+
 {- Create a Person record, find the fields in the specs -}
 
 {- Implement the introduce function -}

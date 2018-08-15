@@ -8,6 +8,9 @@ module Katas.Fa.FmapFunctionCompositionSpec (spec) where
 import Test.Hspec
 import Test.QuickCheck
 
+main :: IO ()
+main = hspec spec
+
 spec :: Spec
 spec = do
     describe "fmap can be considered to be function composition" $ do

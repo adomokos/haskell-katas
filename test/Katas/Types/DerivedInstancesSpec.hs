@@ -3,6 +3,9 @@ module Katas.Types.DerivedInstancesSpec (spec) where
 import Test.Hspec
 import Test.QuickCheck
 
+main :: IO ()
+main = hspec spec
+
 {-
    Create a Person record with 3 fields
    * firstName

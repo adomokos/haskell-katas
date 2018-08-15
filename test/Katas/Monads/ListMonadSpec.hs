@@ -3,6 +3,9 @@ module Katas.Monads.ListMonadSpec (spec) where
 import Test.Hspec
 import Test.QuickCheck
 
+main :: IO ()
+main = hspec spec
+
 {-
     This is what Monad instance for lists looks like:
 
@@ -14,9 +17,6 @@ import Test.QuickCheck
 
 -- Use the do notation for chars and ints
 {- listOfTuples :: [(Int, Char)] -}
-
-main :: IO ()
-main = hspec spec
 
 spec :: Spec
 spec = do

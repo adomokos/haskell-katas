@@ -3,6 +3,9 @@ module Katas.Types.MoreTypeClassesSpec (spec) where
 import Test.Hspec
 import Test.QuickCheck
 
+main :: IO ()
+main = hspec spec
+
 {-
     Typeclasses are like interfaces. A type class defines some
     behavior, and types can behave that way.

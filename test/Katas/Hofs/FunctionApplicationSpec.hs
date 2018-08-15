@@ -3,6 +3,9 @@ module Katas.Hofs.FunctionApplicationSpec (spec) where
 import Test.Hspec
 import Test.QuickCheck
 
+main :: IO ()
+main = hspec spec
+
 spec :: Spec
 spec = do
     describe "Function application with $" $ do

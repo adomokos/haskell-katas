@@ -3,6 +3,9 @@ module Katas.Hofs.LambdasSpec (spec) where
 import Test.Hspec
 import Test.QuickCheck
 
+main :: IO ()
+main = hspec spec
+
 spec :: Spec
 spec = do
     describe "Lambdas" $ do

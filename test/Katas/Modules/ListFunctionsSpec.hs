@@ -5,6 +5,9 @@ import Test.QuickCheck
 import qualified Data.List as L
 import Data.Function
 
+main :: IO ()
+main = hspec spec
+
 {- search :: (Eq a) => [a] -> [a] -> Bool -}
 {- search needle haystack = -}
     {- let nlen = length needle -}

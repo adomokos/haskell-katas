@@ -3,6 +3,9 @@ module Katas.Types.MakingTypesSpec (spec) where
 import Test.Hspec
 import Test.QuickCheck
 
+main :: IO ()
+main = hspec spec
+
 {- Shape type should have Circle (3 args) and Rectangle (4 args) data constructors -}
 {- data Shape ... -}
 

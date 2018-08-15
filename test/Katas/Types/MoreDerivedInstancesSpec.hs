@@ -3,6 +3,9 @@ module Katas.Types.MoreDerivedInstancesSpec (spec) where
 import Test.Hspec
 import Test.QuickCheck
 
+main :: IO ()
+main = hspec spec
+
 {- Day is an enumeration of each day in the week -}
 
 spec :: Spec

@@ -5,6 +5,9 @@ import Test.QuickCheck
 import qualified Data.Map as Map
 import Data.Char
 
+main :: IO ()
+main = hspec spec
+
 phoneBook = 
     [("betty","555-2938")
     ,("bonnie","452-2928")

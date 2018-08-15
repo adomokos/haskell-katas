@@ -3,6 +3,9 @@ module Katas.Fa.NewTypeSpec (spec) where
 import Test.Hspec
 import Test.QuickCheck
 
+main :: IO ()
+main = hspec spec
+
 {-
     This would work:
     data ZipList a = ZipList { getZipList :: [a] }

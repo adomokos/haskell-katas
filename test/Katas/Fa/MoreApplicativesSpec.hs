@@ -4,6 +4,9 @@ import Test.Hspec
 import Test.QuickCheck
 import Control.Applicative
 
+main :: IO ()
+main = hspec spec
+
 {-
     You can think of functions as boxes, that contain their
     eventual result.

@@ -3,6 +3,9 @@ module Katas.Flow.LetItBeSpec (spec) where
 import Test.Hspec
 import Test.QuickCheck
 
+main :: IO ()
+main = hspec spec
+
 {- cylinder :: (RealFloat a) => a -> a -> a -}
 {- cylinder r h = -}
     {- ... -}

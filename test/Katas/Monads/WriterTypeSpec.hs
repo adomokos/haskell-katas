@@ -5,6 +5,9 @@ import Test.QuickCheck
 import Control.Monad.Writer
 import Data.Monoid
 
+main :: IO ()
+main = hspec spec
+
 {-
     newType Writer w a = Writer { runWriter :: (a, w) }
     It's wrapped in a newtype so that it can be made an instance
@@ -23,9 +26,6 @@ import Data.Monoid
 
 -- Same as above, but `tell` that "Gonna multiply these two"
 {- multWithLog' :: Writer [String] Int -}
-
-main :: IO ()
-main = hspec spec
 
 spec :: Spec
 spec = do

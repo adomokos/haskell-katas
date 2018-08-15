@@ -3,6 +3,9 @@ module Katas.Modules.MapFunctionalitySpec (spec) where
 import Test.Hspec
 import Test.QuickCheck
 
+main :: IO ()
+main = hspec spec
+
 phoneBook =
     [("betty","555-2938")
     ,("bonnie","452-2928")

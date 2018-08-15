@@ -3,6 +3,9 @@ module Katas.Types.YesNoTypeClassSpec (spec) where
 import Test.Hspec
 import Test.QuickCheck
 
+main :: IO ()
+main = hspec spec
+
 {-
     Simulate the JavaScript behavior,
     where if (0) or if ("") if ("WHAT") works.

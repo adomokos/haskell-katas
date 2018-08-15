@@ -3,6 +3,9 @@ module Katas.Flow.WhereSpec (spec) where
 import Test.Hspec
 import Test.QuickCheck
 
+main :: IO ()
+main = hspec spec
+
 {- BMI boundaries are 18.5, 25.0 and 30.0 -}
 {- Calculation logic: weight / height ^ 2 -}
 {- bmiTell weight height -}

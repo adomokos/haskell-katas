@@ -3,6 +3,9 @@ module Katas.Hofs.IntroSpec (spec) where
 import Test.Hspec
 import Test.QuickCheck
 
+main :: IO ()
+main = hspec spec
+
 spec :: Spec
 spec = do
     describe "Higher Order Functions" $ do

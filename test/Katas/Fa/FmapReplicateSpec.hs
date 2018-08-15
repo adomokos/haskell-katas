@@ -4,6 +4,9 @@ import Test.Hspec
 import Test.QuickCheck
 import Data.Either
 
+main :: IO ()
+main = hspec spec
+
 spec :: Spec
 spec = do
     describe "fmap replicate on various types" $ do

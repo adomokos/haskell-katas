@@ -5,6 +5,9 @@ import Test.QuickCheck
 import Data.Monoid
 import qualified Data.Foldable as F
 
+main :: IO ()
+main = hspec spec
+
 -- Define a tree Data Type
 
 -- Add implementation for F.Foldable with F.foldMap to Tree

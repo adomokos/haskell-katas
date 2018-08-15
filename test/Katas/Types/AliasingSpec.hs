@@ -4,6 +4,9 @@ import Test.Hspec
 import Test.QuickCheck
 import qualified Data.Map as Map
 
+main :: IO ()
+main = hspec spec
+
 type PhoneNumber = String
 type Name = String
 type PhoneBook = [(Name,PhoneNumber)]

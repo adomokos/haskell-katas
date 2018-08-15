@@ -3,12 +3,12 @@ module Katas.Exercises.RPNCalculatorSpec (spec) where
 import Test.Hspec
 import Test.QuickCheck
 
+main :: IO ()
+main = hspec spec
+
 {- foldingFunction :: (Num a, Read a) => [a] -> String -> [a] -}
 
 {- solveRPN :: (Num a, Read a) => String -> a -}
-
-main :: IO ()
-main = hspec spec
 
 spec :: Spec
 spec = do

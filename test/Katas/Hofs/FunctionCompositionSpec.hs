@@ -3,6 +3,9 @@ module Katas.Hofs.FunctionCompositionSpec (spec) where
 import Test.Hspec
 import Test.QuickCheck
 
+main :: IO ()
+main = hspec spec
+
 spec :: Spec
 spec = do
     describe "Function composition" $ do

@@ -5,6 +5,9 @@ import Test.QuickCheck
 import Data.List
 import qualified Data.Set as M {- use M.filter now -}
 
+main :: IO ()
+main = hspec spec
+
 spec :: Spec
 spec = do
     describe "Dealing with Modules" $ do

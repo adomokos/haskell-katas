@@ -4,6 +4,9 @@ import Test.Hspec
 import Test.QuickCheck
 import Data.Monoid
 
+main :: IO ()
+main = hspec spec
+
 {-
     Look at this typeclass:
     class Monoid m where
@@ -25,9 +28,6 @@ import Data.Monoid
 
     For product and sum Data.Monoid exposes Product and Sum
 -}
-
-main :: IO ()
-main = hspec spec
 
 spec :: Spec
 spec = do

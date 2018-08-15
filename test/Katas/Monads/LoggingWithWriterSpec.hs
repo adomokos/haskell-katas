@@ -5,6 +5,9 @@ import Test.QuickCheck
 import Control.Monad.Writer
 import Data.Monoid
 
+main :: IO ()
+main = hspec spec
+
 -- Greatest common deviser
 {- gcd' :: Int -> Int -> Int -}
 
@@ -19,9 +22,6 @@ import Data.Monoid
 {- instance Monoid (DiffList a) where -}
 
 {- gcdWithDiffList :: Int -> Int -> Writer (DiffList String) Int -}
-
-main :: IO ()
-main = hspec spec
 
 spec :: Spec
 spec = do

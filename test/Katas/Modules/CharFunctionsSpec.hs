@@ -6,6 +6,9 @@ import qualified Data.Char as C
 import qualified Data.List as L
 import Data.Function
 
+main :: IO ()
+main = hspec spec
+
 spec :: Spec
 spec = do
     describe "Char functions" $ do

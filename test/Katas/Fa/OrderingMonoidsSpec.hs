@@ -4,6 +4,9 @@ import Test.Hspec
 import Test.QuickCheck
 import Data.Monoid
 
+main :: IO ()
+main = hspec spec
+
 {-
     A practical example of where monoids could be useful
 -}
@@ -20,9 +23,6 @@ import Data.Monoid
 
 -- Compare length, vowels (aeiou) and strings in this order
 -- lengthVowelCompare :: String -> String -> Ordering
-
-main :: IO ()
-main = hspec spec
 
 spec :: Spec
 spec = do

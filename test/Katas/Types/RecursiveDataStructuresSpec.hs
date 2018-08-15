@@ -3,6 +3,9 @@ module Katas.Types.RecursiveDataStructuresSpec (spec) where
 import Test.Hspec
 import Test.QuickCheck
 
+main :: IO ()
+main = hspec spec
+
 {- Example 1 -}
 {- Define a list that uses Cons to add elements to the list -}
 {- Use infixr 5 -}

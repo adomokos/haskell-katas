@@ -3,6 +3,9 @@ module Katas.Types.TypeParametersSpec (spec) where
 import Test.Hspec
 import Test.QuickCheck
 
+main :: IO ()
+main = hspec spec
+
 {-
     Create a Vector type constractor,
     Data constructor should take in 3 arguments

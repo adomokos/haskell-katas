@@ -3,6 +3,9 @@ module Katas.Flow.CaseExpressionSpec (spec) where
 import Test.Hspec
 import Test.QuickCheck
 
+main :: IO ()
+main = hspec spec
+
 {- head' :: [a] -> a -}
 {- head' xs = case xs of ... -}
 

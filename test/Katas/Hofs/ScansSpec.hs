@@ -3,6 +3,9 @@ module Katas.Hofs.ScansSpec (spec) where
 import Test.Hspec
 import Test.QuickCheck
 
+main :: IO ()
+main = hspec spec
+
 spec :: Spec
 spec = do
     describe "Scans are like folds" $ do
