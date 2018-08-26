@@ -1,8 +1,8 @@
--- This file has been generated from package.yaml by hpack version 0.20.0.
+-- This file has been generated from package.yaml by hpack version 0.28.2.
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 71183eed1d44376eaa3910e28380a98f6914bbdf366339dd3e95550a6e03c9df
+-- hash: b795eca21bb334d78f2c3cffcb4df8acd5e0b3436e3a1fe583d497fb6522f144
 
 name:                katas
 version:             0.1.0.0
@@ -92,6 +92,7 @@ test-suite katas-test
       Katas.Monads.CalculateAgeFromDatesSpec
       Katas.Monads.CalculateBirthYearSpec
       Katas.Monads.DoNotationSpec
+      Katas.Monads.InstancesSpec
       Katas.Monads.IntroSpec
       Katas.Monads.IntroToWriteMonadSpec
       Katas.Monads.ListMonadSpec

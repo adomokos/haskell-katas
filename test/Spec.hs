@@ -60,6 +60,7 @@ import qualified Katas.Monads.LoggingWithWriterSpec
 import qualified Katas.Monads.ReaderSpec
 import qualified Katas.Monads.ReaderExampleSpec
 import qualified Katas.Monads.StatefulComputationsSpec
+import qualified Katas.Monads.InstancesSpec
 import qualified Katas.Exercises.RPNCalculatorSpec
 import qualified Katas.Exercises.LondonToHeathrowSpec
 import qualified Katas.Exercises.KnightsQuestSpec
@@ -129,10 +130,11 @@ spec = do
     describe "56 - Monads - Monad Plus" Katas.Monads.MonadPlusSpec.spec
     describe "57 - Monads - Knight's Quest" Katas.Exercises.KnightsQuestSpec.spec
     describe "58 - Monads - Laws" Katas.Monads.MonadLawsSpec.spec
-    describe "59 - Monads - Intro to Write Monad" Katas.Monads.IntroToWriteMonadSpec.spec
-    describe "60 - Monads - Writer Type" Katas.Monads.WriterTypeSpec.spec
-    describe "61 - Monads - Logging with Writer" Katas.Monads.LoggingWithWriterSpec.spec
-    describe "62 - Monads - Reader" Katas.Monads.ReaderSpec.spec
-    describe "63 - Monads - Reader Example" Katas.Monads.ReaderExampleSpec.spec
-    describe "64 - Monads - Stateful Computations" Katas.Monads.StatefulComputationsSpec.spec
-    describe "65 - Exercices - Balanced Binary Tree Check" Katas.Exercises.BalancedBinaryTreeSpec.spec
+    describe "59 - Monads - Instances" Katas.Monads.InstancesSpec.spec
+    describe "60 - Monads - Intro to Write Monad" Katas.Monads.IntroToWriteMonadSpec.spec
+    describe "61 - Monads - Writer Type" Katas.Monads.WriterTypeSpec.spec
+    describe "62 - Monads - Logging with Writer" Katas.Monads.LoggingWithWriterSpec.spec
+    describe "63 - Monads - Reader" Katas.Monads.ReaderSpec.spec
+    describe "64 - Monads - Reader Example" Katas.Monads.ReaderExampleSpec.spec
+    describe "65 - Monads - Stateful Computations" Katas.Monads.StatefulComputationsSpec.spec
+    describe "66 - Exercices - Balanced Binary Tree Check" Katas.Exercises.BalancedBinaryTreeSpec.spec
