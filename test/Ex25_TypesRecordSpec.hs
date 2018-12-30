@@ -1,4 +1,6 @@
-module Ex25_TypesRecordSpec (spec) where
+module Ex25_TypesRecordSpec
+  ( spec
+  ) where
 
 import Test.Hspec
 import Test.QuickCheck
@@ -7,16 +9,19 @@ main :: IO ()
 main = hspec spec
 
 -- Create a Person record, find the fields in the specs
-data Person = Person { firstName :: String,
-                       lastName  :: String,
-                       age       :: Int,
-                       height    :: Float,
-                       phone     :: String,
-                       flavor    :: String }
+data Person = Person
+  { firstName :: String
+  , lastName :: String
+  , age :: Int
+  , height :: Float
+  , phone :: String
+  , flavor :: String
+  }
 
 -- Implement the introduce function
 introduce :: Person -> String
-introduce person = "Hello, " ++ firstName person ++ " " ++ lastName person ++ "!"
+introduce person =
+  "Hello, " ++ firstName person ++ " " ++ lastName person ++ "!"
 
 {-
   Create the factory function - makePerson

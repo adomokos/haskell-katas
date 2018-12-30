@@ -1,4 +1,6 @@
-module Ex06_FlowPatternMatchingSpec (spec) where
+module Ex06_FlowPatternMatchingSpec
+  ( spec
+  ) where
 
 import Test.Hspec
 import Test.QuickCheck
@@ -8,13 +10,13 @@ main = hspec spec
 
 factorial :: Int -> Int
 factorial 0 = 1
-factorial x = x * factorial (x-1)
+factorial x = x * factorial (x - 1)
 
 charName :: Char -> String
 charName 'a' = "Albert"
 
-addVectors :: (Num a) => (a,a) -> (a,a) -> (a,a)
-addVectors (a,b) (c,d) = (a+c,b+d)
+addVectors :: (Num a) => (a, a) -> (a, a) -> (a, a)
+addVectors (a, b) (c, d) = (a + c, b + d)
 
 first :: (a, b, c) -> a
 first (x, _, _) = x
@@ -49,34 +51,32 @@ firstLetter l@(x:_) = "The first letter of " ++ l ++ " is " ++ [x]
 spec :: Spec
 spec =
   describe "Pattern matching" $ do
-    it "can be used in factorial calc" $
-      factorial 5 `shouldBe` 120
-    it "can fail when no default case" $
-      charName 'a' `shouldBe` "Albert"
+    it "can be used in factorial calc" $ factorial 5 `shouldBe` 120
+    it "can fail when no default case" $ charName 'a' `shouldBe` "Albert"
       {- evaluate (charName 'd') `shouldThrow` anyErrorCall -}
-    it "can be used on tuples" $
-      addVectors (1,2)(3,4) `shouldBe` (4,6)
+    it "can be used on tuples" $ addVectors (1, 2) (3, 4) `shouldBe` (4, 6)
     it "can be used on triples" $ do
-      first (1,2,3) `shouldBe` 1
-      second (1,2,3) `shouldBe` 2
-      third (1,2,3) `shouldBe` 3
+      first (1, 2, 3) `shouldBe` 1
+      second (1, 2, 3) `shouldBe` 2
+      third (1, 2, 3) `shouldBe` 3
     it "can pattern list comprehensions" $ do
-      let xs = [(1,3),(4,3),(2,4),(5,3),(5,6),(3,1)]
-      [a+b | (a,b) <- xs] `shouldBe` [4,7,6,8,11,4]
+      let xs = [(1, 3), (4, 3), (2, 4), (5, 3), (5, 6), (3, 1)]
+      [a + b | (a, b) <- xs] `shouldBe` [4, 7, 6, 8, 11, 4]
     it "can be used for the head function" $ do
-      head' [2,3,4] `shouldBe` 2
+      head' [2, 3, 4] `shouldBe` 2
       head' "Hello" `shouldBe` 'H'
-    it "can safely process a list" $ do
+    it "can safely process a list" $
       {- tell [] `shouldBe` "This list is empty" -}
+     do
       tell [1] `shouldBe` "This list has one element: 1"
-      tell [1,2] `shouldBe` "This list has two elements: 1 and 2"
-      tell [1,2,3] `shouldBe` "This list is too long"
+      tell [1, 2] `shouldBe` "This list has two elements: 1 and 2"
+      tell [1, 2, 3] `shouldBe` "This list is too long"
     it "can count elements in list with recursion" $ do
       length' [] `shouldBe` 0
-      length' [1,2,3] `shouldBe` 3
+      length' [1, 2, 3] `shouldBe` 3
     it "can reduce add a list" $ do
       sum' [] `shouldBe` 0
-      sum' [1,2,3] `shouldBe` 6
+      sum' [1, 2, 3] `shouldBe` 6
     it "can hold the original item with pattern" $ do
       firstLetter "" `shouldBe` "Empty string, whoops!"
       firstLetter "Dracula" `shouldBe` "The first letter of Dracula is D"

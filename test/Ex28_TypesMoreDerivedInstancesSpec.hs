@@ -1,21 +1,31 @@
-module Ex28_TypesMoreDerivedInstancesSpec (spec) where
+module Ex28_TypesMoreDerivedInstancesSpec
+  ( spec
+  ) where
 
+import Control.Exception (evaluate)
 import Test.Hspec
 import Test.QuickCheck
-import Control.Exception ( evaluate )
 
 main :: IO ()
 main = hspec spec
 
 -- Day is an enumeration of each day in the week
-data Day = Monday | Tuesday | Wednesday | Thursday | Friday
-         | Saturday | Sunday deriving (Eq, Show, Read, Ord, Bounded, Enum)
+data Day
+  = Monday
+  | Tuesday
+  | Wednesday
+  | Thursday
+  | Friday
+  | Saturday
+  | Sunday
+  deriving (Eq, Show, Read, Ord, Bounded, Enum)
 
 spec :: Spec
 spec = do
   describe "Derived Instances" $ do
-    it "can compare two Bool fields" $ do
+    it "can compare two Bool fields" $
       -- Comparing True to False should be greater
+     do
       compare True False `shouldBe` GT
       True > False `shouldBe` True
       True < False `shouldBe` False
@@ -34,8 +44,9 @@ spec = do
     it "is also part of Bounded, can get lowest and highest value" $ do
       (minBound :: Day) `shouldBe` Monday
       (maxBound :: Day) `shouldBe` Sunday
-    it "is an instance of Enum, can get predecessor and successors" $ do
+    it "is an instance of Enum, can get predecessor and successors" $
       -- Enums have predecessors and successors
+     do
       succ Monday `shouldBe` Tuesday
       pred Saturday `shouldBe` Friday
       -- Calling predecessor for Monday will throw an error

@@ -1,4 +1,6 @@
-module Ex08_FlowWhereSpec (spec) where
+module Ex08_FlowWhereSpec
+  ( spec
+  ) where
 
 import Test.Hspec
 import Test.QuickCheck
@@ -12,19 +14,21 @@ bmiTell weight height
   | bmi <= skinny = "You're underweight, you emo, you!"
   | bmi <= normal = "You're supposedly normal."
   | bmi <= fat = "You're fat! Lose some weight!"
-  | otherwise   = "You're a whale, congratulations!"
-  where bmi = weight / height ^ 2
-        skinny = 18.5
-        normal = 25.0
-        fat = 30.0
+  | otherwise = "You're a whale, congratulations!"
+  where
+    bmi = weight / height ^ 2
+    skinny = 18.5
+    normal = 25.0
+    fat = 30.0
 
 initials :: String -> String -> String
 initials "" "" = ""
-initials (x:_) (y:_) = [x,y]
+initials (x:_) (y:_) = [x, y]
 
 calcBmis :: Fractional t => [(t, t)] -> [t]
 calcBmis xs = [calcBmis w h | (w, h) <- xs]
-  where calcBmis w h = w/h^2
+  where
+    calcBmis w h = w / h ^ 2
 
 spec :: Spec
 spec =

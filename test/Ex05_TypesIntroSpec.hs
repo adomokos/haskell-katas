@@ -1,4 +1,6 @@
-module Ex05_TypesIntroSpec (spec) where
+module Ex05_TypesIntroSpec
+  ( spec
+  ) where
 
 import Test.Hspec
 import Test.QuickCheck
@@ -8,7 +10,7 @@ main = hspec spec
 
 {- Create the `removeNonUppercase` function with proper type -}
 removeNonUppercase :: String -> String
-removeNonUppercase xs = [x | x <- xs, x `elem` ['A'..'Z']]
+removeNonUppercase xs = [x | x <- xs, x `elem` ['A' .. 'Z']]
 
 {- Create the addThree function with proper type info -}
 addThree :: Int -> Int -> Int -> Int
@@ -33,19 +35,19 @@ spec = do
     it "can read strings into values" $ do
       read "True" || False `shouldBe` True
       read "8.2" + 3.8 `shouldBe` 12
-      (read "[1,2,3,4]" :: [Int]) `shouldBe` [1,2,3,4]
+      (read "[1,2,3,4]" :: [Int]) `shouldBe` [1, 2, 3, 4]
       (read "(3, 'a')" :: (Int, Char)) `shouldBe` (3, 'a')
     it "can provide ranges, next items for Enum types" $ do
-      ['a'..'e'] `shouldBe` "abcde"
-      [LT .. GT] `shouldBe` [LT,EQ,GT]
-      [3..5] `shouldBe` [3,4,5]
+      ['a' .. 'e'] `shouldBe` "abcde"
+      [LT .. GT] `shouldBe` [LT, EQ, GT]
+      [3 .. 5] `shouldBe` [3, 4, 5]
       {- succ to get the next -}
       succ 'B' `shouldBe` 'C'
   describe "Num is a numeric typeclass" $
     it "can act like numbers" $
       {- use the type -}
-      (20 :: Int) `shouldBe` 20
+    (20 :: Int) `shouldBe` 20
   describe "fromIntegral is there historical reasons" $
     it "can add Int and Floating point numbers" $
       {- from... function -}
-      fromIntegral (length [1,2,3,4]) + 3.2 `shouldBe` 7.2
+    fromIntegral (length [1, 2, 3, 4]) + 3.2 `shouldBe` 7.2

@@ -1,4 +1,6 @@
-module Ex07_FlowGuardsSpec (spec) where
+module Ex07_FlowGuardsSpec
+  ( spec
+  ) where
 
 import Test.Hspec
 import Test.QuickCheck
@@ -33,8 +35,7 @@ spec =
       bmiTell 23 `shouldBe` "You're supposedly normal."
       bmiTell 27 `shouldBe` "You're fat! Lose some weight!"
       bmiTell 31.4 `shouldBe` "You're a whale, congratulations!"
-    it "can calculate max from two values" $
-      max' 1 3 `shouldBe` 3
+    it "can calculate max from two values" $ max' 1 3 `shouldBe` 3
     it "can compare two values" $ do
       compare' 2 2 `shouldBe` EQ
       2 `compare'` 3 `shouldBe` LT
