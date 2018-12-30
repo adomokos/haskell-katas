@@ -2,7 +2,7 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 62db39d4245b4399d4b06b0ee06127781490837b4edf64c4dbfb77909b27fe75
+-- hash: 07b1b96661a3e948b390501ac56d472faa581eac027e9cb258365338d3595130
 
 name:                katas
 version:             0.1.0.0
@@ -103,7 +103,7 @@ test-suite katas-test
       Ex62_MonadsLoggingWithWriterSpec
       Ex63_MonadsReaderSpec
       Ex64_MonadsReaderExampleSpec
-      Ex65_ExercisesBalancedBinaryTreeSpec
       Ex65_MonadsStatefulComputationsSpec
+      Ex66_ExercisesBalancedBinaryTreeSpec
       Paths_katas
   default-language: Haskell2010

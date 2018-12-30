@@ -1,4 +1,4 @@
-module Ex65_ExercisesBalancedBinaryTreeSpec
+module Ex66_ExercisesBalancedBinaryTreeSpec
   ( spec
   ) where
 
