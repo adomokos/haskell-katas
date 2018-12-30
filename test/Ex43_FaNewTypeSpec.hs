@@ -1,10 +1,13 @@
-module Ex43_FaNewTypeSpec (spec) where
+module Ex43_FaNewTypeSpec
+  ( spec
+  ) where
 
 import Test.Hspec
 import Test.QuickCheck
 
 main :: IO ()
 main = hspec spec
+    {- fmap ___ -}
 
 {-
     This would work:
@@ -20,30 +23,27 @@ main = hspec spec
     parameter represents the type of the first component of the tuple.
 -}
 
-{- newtype CharList = ___ -}
-
-{- newtype Pair ... = ___ -}
-
-{- instance Functor (Pair c) where -}
-    {- fmap ___ -}
+-- newtype CharList = ___
+-- newtype Pair ... = ___
+-- instance Functor (Pair c) where
 
 spec :: Spec
-spec = do
-    describe "newtype" $ do
-        it "can print values" $ do
-            pending
-            {- let charList = ___ -}
-            {- show charList -}
-                {- `shouldBe` "CharList {getCharList = \"this will be shown!\"}" -}
-        it "can equate values" $ do
-            pending
-            {- CharList "benny" == CharList "benny" -}
-                {- `shouldBe` ___ -}
-            {- CharList "benny" == CharList "oisters" -}
-                {- `shouldBe` ___ -}
-        it "works with the newtype Pair" $ do
-            pending
-            {- (getPair $ fmap (*100) (Pair (2,3))) -}
-                {- `shouldBe` (200, 3) -}
-            {- (getPair $ fmap reverse (Pair ("london calling", 3))) -}
-                {- `shouldBe` ("gnillac nodnol", 3) -}
+spec =
+  describe "newtype" $ do
+    it "can print values" $ do
+      pending
+      -- let charList = ___
+      -- show charList
+          -- `shouldBe` "CharList {getCharList = \"this will be shown!\"}"
+    it "can equate values" $ do
+      pending
+      -- CharList "benny" == CharList "benny"
+          -- `shouldBe` ___
+      -- CharList "benny" == CharList "oisters"
+          -- `shouldBe` ___
+    it "works with the newtype Pair" $ do
+      pending
+      -- (getPair $ fmap (*100) (Pair (2,3)))
+          -- `shouldBe` (200, 3)
+      -- (getPair $ fmap reverse (Pair ("london calling", 3)))
+          -- `shouldBe` ("gnillac nodnol", 3)

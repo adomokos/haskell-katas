@@ -1,4 +1,6 @@
-module Ex31_TypesMoreTypeClassesSpec (spec) where
+module Ex31_TypesMoreTypeClassesSpec
+  ( spec
+  ) where
 
 import Test.Hspec
 import Test.QuickCheck
@@ -13,31 +15,25 @@ main = hspec spec
     that we can use the functions that the typeclass defines with
     that type.
 -}
-
-{- data TrafficLight = ___ -}
-
-{- Instead of deriving class instances for it, writing up instances by hand -}
-{- instance Eq TrafficLight where -}
-    {- ___ -}
-
+-- data TrafficLight = ___
+-- Instead of deriving class instances for it, writing up instances by hand
+-- instance Eq TrafficLight where
 {-
     Minimal complete definition for the typeclass = the minimum of functions that we
     have to implement so that our type can behave like the class advertises.
 -}
-
-{- Similarly, the instance of Show can be created by hand -}
-{- instance Show TrafficLight where -}
-    {- ___ -}
+-- Similarly, the instance of Show can be created by hand
+-- instance Show TrafficLight where
 
 spec :: Spec
-spec = do
-    describe "Recursive Data Structures" $ do
-        it "can use the manually created Eq instance" $ do
-            pending
-            {- Red == Red `shouldBe` True -}
-            {- Yellow == Green `shouldBe` False -}
-            {- Yellow /= Red `shouldBe` True -}
-        it "can use the manually created Show instance" $ do
-            pending
-            {- show Red `shouldBe` "Red light" -}
-            {- show Green `shouldBe` "Green light" -}
+spec =
+  describe "Recursive Data Structures" $ do
+    it "can use the manually created Eq instance" $ do
+      pending
+      -- Red == Red `shouldBe` True
+      -- Yellow == Green `shouldBe` False
+      -- Yellow /= Red `shouldBe` True
+    it "can use the manually created Show instance" $ do
+      pending
+      -- show Red `shouldBe` "Red light"
+      -- show Green `shouldBe` "Green light"

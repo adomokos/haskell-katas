@@ -1,4 +1,6 @@
-module Ex34_FaFunctorTypeClassSpec (spec) where
+module Ex34_FaFunctorTypeClassSpec
+  ( spec
+  ) where
 
 import Test.Hspec
 import Test.QuickCheck
@@ -40,7 +42,12 @@ main = hspec spec
         fmap f (Left x) = Left x
 -}
 
-data Tree a = EmptyTree | Node a (Tree a) (Tree a) deriving (Show, Read, Eq)
+data Tree a
+  = EmptyTree
+  | Node a
+         (Tree a)
+         (Tree a)
+  deriving (Show, Read, Eq)
 
 singleton :: a -> Tree a
 singleton x = Node x EmptyTree EmptyTree
@@ -48,32 +55,30 @@ singleton x = Node x EmptyTree EmptyTree
 treeInsert :: (Ord a) => a -> Tree a -> Tree a
 treeInsert x EmptyTree = singleton x
 treeInsert x (Node a left right)
-    | x == a = Node x left right
-    | x < a = Node a (treeInsert x left) right
-    | x > a = Node a left (treeInsert x right)
+  | x == a = Node x left right
+  | x < a = Node a (treeInsert x left) right
+  | x > a = Node a left (treeInsert x right)
 
 {- Create an Functor implementation of the Tree -}
-
 spec :: Spec
-spec = do
-    describe "Functor typeclass" $ do
-        it "map is a functor" $ do
-            pending
-            {- ___ [1..3] `shouldBe` [2,4,6] -}
-            {- map ___ [1..3] `shouldBe` [2,4,6] -}
-            {- ___ (*3) [] `shouldBe` [] -}
-        it "works with Maybe, as it's a functor" $ do
-            pending
-            {- fmap (++ " HEY GUYS") ___ -}
-                {- `shouldBe` Just "Something serious. HEY GUYS" -}
-            {- fmap (++ " HEY GUYS") ___ `shouldBe` Nothing -}
-            {- fmap (*2) ___ `shouldBe` Just 400 -}
-            {- fmap (*3) ___ `shouldBe` Nothing -}
-        it "works with our Tree type class" $ do
-            pending
-            {- let nums = [20,28,12] -}
-            {- let numsTree = foldr treeInsert EmptyTree nums -}
-
-            {- fmap (*2) ___ `shouldBe` EmptyTree -}
-            {- fmap ___ (foldr treeInsert EmptyTree [5,7,3]) -}
-                {- `shouldBe` numsTree -}
+spec =
+  describe "Functor typeclass" $ do
+    it "map is a functor" $ do
+      pending
+      -- ___ [1..3] `shouldBe` [2,4,6]
+      -- map ___ [1..3] `shouldBe` [2,4,6]
+      -- ___ (*3) [] `shouldBe` []
+    it "works with Maybe, as it's a functor" $ do
+      pending
+      -- fmap (++ " HEY GUYS") ___
+          -- `shouldBe` Just "Something serious. HEY GUYS"
+      -- fmap (++ " HEY GUYS") ___ `shouldBe` Nothing
+      -- fmap (*2) ___ `shouldBe` Just 400
+      -- fmap (*3) ___ `shouldBe` Nothing
+    it "works with our Tree type class" $ do
+      pending
+      -- let nums = [20,28,12]
+      -- let numsTree = foldr treeInsert EmptyTree nums
+      -- fmap (*2) ___ `shouldBe` EmptyTree
+      -- fmap ___ (foldr treeInsert EmptyTree [5,7,3])
+          -- `shouldBe` numsTree

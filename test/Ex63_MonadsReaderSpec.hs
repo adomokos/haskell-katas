@@ -1,11 +1,19 @@
-module Ex63_MonadsReaderSpec (spec) where
+module Ex63_MonadsReaderSpec
+  ( spec
+  ) where
 
 import Test.Hspec
 import Test.QuickCheck
-{- import Control.Monad.Instances -}
 
 main :: IO ()
 main = hspec spec
+
+    {- a = ___ -}
+    {- b = ___ -}
+    {- in a+b -}
+    {- a <- ___ -}
+    {- b <- ___ -}
+    {- return (a+b) -}
 
 {-
     instance Monad ((->) r) where
@@ -13,35 +21,28 @@ main = hspec spec
         h >>= f = \w -> f (h w) w
 -}
 
-{- addStuffSimple :: Int -> Int -}
+-- addStuffSimple :: Int -> Int
 -- times 2 and plus 10
-{- addStuffSimple x = let -}
-    {- a = ___ -}
-    {- b = ___ -}
-    {- in a+b -}
-
-{- addStuff :: Int -> Int -}
+-- addStuffSimple x = let
+-- addStuff :: Int -> Int
 -- same here, times 2 and plus 10
-{- addStuff = do -}
-    {- a <- ___ -}
-    {- b <- ___ -}
-    {- return (a+b) -}
+-- addStuff = do
 
 spec :: Spec
-spec = do
-    describe "Reader" $ do
-        it "functions are applicative functors" $ do
-            pending
-            -- times 5 and plus 3
-            {- let f = ___ -}
-            {- let g = ___ -}
-            {- (fmap f g) 8 `shouldBe` 55 -}
-            -- times 2 and plus 10
-            {- let f = (+) <$> ___ <*> ___ -}
-            {- f 3 `shouldBe` 19 -}
-        it "can add numbers together" $ do
-            pending
-            {- addStuffSimple 3 `shouldBe` 19 -}
-        it "can use functions as monadic values" $ do
-            pending
-            {- addStuff 3 `shouldBe` 19 -}
+spec =
+  describe "Reader" $ do
+    it "functions are applicative functors" $ do
+      pending
+      -- times 5 and plus 3
+      -- let f = ___
+      -- let g = ___
+      -- (fmap f g) 8 `shouldBe` 55
+      -- times 2 and plus 10
+      -- let f = (+) <$> ___ <*> ___
+      -- f 3 `shouldBe` 19
+    it "can add numbers together" $ do
+      pending
+      -- addStuffSimple 3 `shouldBe` 19
+    it "can use functions as monadic values" $ do
+      pending
+      -- addStuff 3 `shouldBe` 19

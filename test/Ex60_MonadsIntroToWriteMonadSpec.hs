@@ -31,7 +31,7 @@ type Price = Sum Int
 {- addDrink :: Food -> (Food,Price) -}
 
 spec :: Spec
-spec = do
+spec =
     describe "Writer Monad" $ do
         it "can tell a size of a gang" $ do
             pending

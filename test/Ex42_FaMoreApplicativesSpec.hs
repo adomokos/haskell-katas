@@ -1,8 +1,10 @@
-module Ex42_FaMoreApplicativesSpec (spec) where
+module Ex42_FaMoreApplicativesSpec
+  ( spec
+  ) where
 
+import Control.Applicative
 import Test.Hspec
 import Test.QuickCheck
-import Control.Applicative
 
 main :: IO ()
 main = hspec spec
@@ -19,44 +21,44 @@ main = hspec spec
 -}
 
 -- Implement this function
-{- sequenceA' :: (Applicative f) => [f a] -> f [a] -}
+-- sequenceA' :: (Applicative f) => [f a] -> f [a]
 
 spec :: Spec
-spec = do
-    describe "Applicative" $ do
-        it "works with IO ()" $ do
-            pending
-            {- combined <- (___ <$> return "hello" <*> return ___) -}
-            {- combined `shouldBe` "helloworld" -}
-        it "works with combination of functions" $ do
-            pending
-            {- ((___) <$> (+3) <*> (*100) $ ___) -}
-                {- `shouldBe` 508 -}
-        it "works with lambdas" $ do
-            pending
-            {- ((___) <$> (+3) <*> (*2) <*> (/2) $ 5) -}
-                {- `shouldBe` [8.0,10.0,2.5] -}
-        it "works with zipList" $ do
-            pending
-            -- newtype ZipList a = ZipList { getZipList :: [a] }
-            {- (___ $ (___) <$> ZipList [1,2,3] <*> ZipList [100,100,100]) -}
-                {- `shouldBe` [101,102,103] -}
-        it "applies a function between two applicatives" $ do
-            pending
-            {- fmap (___) (Just 4) `shouldBe` Just [4] -}
-            {- liftA2 (___) (___) (Just [4]) `shouldBe` Just [3,4] -}
-            {- ((___) <$> ___ <*> Just [4]) `shouldBe` Just [3,4] -}
-        it "can create a sequence" $ do
-            pending
-            {- sequenceA' [Just 3, Just 2, Just 1] -}
-                {- `shouldBe` Just [3,2,1] -}
-            {- sequenceA' [Just 3, Nothing, Just 1] -}
-                {- `shouldBe` Nothing -}
-            {- sequenceA' [(+3),(+2),(+1)] 3 -}
-                {- `shouldBe` [6,5,4] -}
-        it "can tell if a number satisfies all the predicates in a list" $ do
-            pending
-            {- map (___) [(>4),(<10),odd] -}
-                {- `shouldBe` [True,True,True] -}
-            {- (___ $ map (\f -> f 7) [(>4),(<10),odd]) -}
-                {- `shouldBe` True -}
+spec =
+  describe "Applicative" $ do
+    it "works with IO ()" $ do
+      pending
+      -- combined <- (___ <$> return "hello" <*> return ___)
+      -- combined `shouldBe` "helloworld"
+    it "works with combination of functions" $ do
+      pending
+      -- ((___) <$> (+3) <*> (*100) $ ___)
+          -- `shouldBe` 508
+    it "works with lambdas" $ do
+      pending
+      -- ((___) <$> (+3) <*> (*2) <*> (/2) $ 5)
+          -- `shouldBe` [8.0,10.0,2.5]
+    it "works with zipList" $ do
+      pending
+      -- newtype ZipList a = ZipList { getZipList :: [a] }
+      -- (___ $ (___) <$> ZipList [1,2,3] <*> ZipList [100,100,100])
+          -- `shouldBe` [101,102,103]
+    it "applies a function between two applicatives" $ do
+      pending
+      -- fmap (___) (Just 4) `shouldBe` Just [4]
+      -- liftA2 (___) (___) (Just [4]) `shouldBe` Just [3,4]
+      -- ((___) <$> ___ <*> Just [4]) `shouldBe` Just [3,4]
+    it "can create a sequence" $ do
+      pending
+      -- sequenceA' [Just 3, Just 2, Just 1]
+          -- `shouldBe` Just [3,2,1]
+      -- sequenceA' [Just 3, Nothing, Just 1]
+          -- `shouldBe` Nothing
+      -- sequenceA' [(+3),(+2),(+1)] 3
+          -- `shouldBe` [6,5,4]
+    it "can tell if a number satisfies all the predicates in a list" $ do
+      pending
+      -- map (___) [(>4),(<10),odd]
+          -- `shouldBe` [True,True,True]
+      -- (___ $ map (\f -> f 7) [(>4),(<10),odd])
+          -- `shouldBe` True

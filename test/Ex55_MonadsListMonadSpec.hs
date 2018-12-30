@@ -1,4 +1,6 @@
-module Ex55_MonadsListMonadSpec (spec) where
+module Ex55_MonadsListMonadSpec
+  ( spec
+  ) where
 
 import Test.Hspec
 import Test.QuickCheck
@@ -16,25 +18,25 @@ main = hspec spec
 -}
 
 -- Use the do notation for chars and ints
-{- listOfTuples :: [(Int, Char)] -}
+-- listOfTuples :: [(Int, Char)]
 
 spec :: Spec
-spec = do
-    describe "List monad" $ do
-        it "can leverage do notation" $ do
-            pending
-            -- use a lambda here
-            {- ([3,4,5] >>= ___) -}
-                {- `shouldBe` [3,-3,4,-4,5,-5] -}
-            {- (___ >>= \x -> ["bad","mad","rad"]) -}
-                {- `shouldBe` [] -}
-            {- length ([1,2,3] >>= \x -> ___) -}
-                {- `shouldBe` 0 -}
-        it "can create a list of tuples by chaining" $ do
-            pending
-            {- let ts = [1,2] >>= \n -> ['a','b'] >>= ___ -}
-            {- let result = [(1,'a'),(1,'b'),(2,'a'),(2,'b')] -}
-            {- ts `shouldBe` result -}
-            {- listOfTuples `shouldBe` result -}
-            {- [___ | n <- ___, ch <- ___] -}
-                {- `shouldBe` result -}
+spec =
+  describe "List monad" $ do
+    it "can leverage do notation" $ do
+      pending
+      -- use a lambda here
+      -- ([3,4,5] >>= ___)
+          -- `shouldBe` [3,-3,4,-4,5,-5]
+      -- (___ >>= \x -> ["bad","mad","rad"])
+          -- `shouldBe` []
+      -- length ([1,2,3] >>= \x -> ___)
+          -- `shouldBe` 0
+    it "can create a list of tuples by chaining" $ do
+      pending
+      -- let ts = [1,2] >>= \n -> ['a','b'] >>= ___
+      -- let result = [(1,'a'),(1,'b'),(2,'a'),(2,'b')]
+      -- ts `shouldBe` result
+      -- listOfTuples `shouldBe` result
+      -- [___ | n <- ___, ch <- ___]
+          -- `shouldBe` result

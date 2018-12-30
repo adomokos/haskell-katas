@@ -1,4 +1,6 @@
-module Ex26_TypesTypeParametersSpec (spec) where
+module Ex26_TypesTypeParametersSpec
+  ( spec
+  ) where
 
 import Test.Hspec
 import Test.QuickCheck
@@ -12,28 +14,26 @@ main = hspec spec
     Type could be displayed and eq
 -}
 
-{- vplus :: (Num t) => Vector t -> Vector t -> Vector t -}
-
-{- vectMult :: (Num t) => Vector t -> t -> Vector t -}
-
-{- scalarMult :: (Num t) => Vector t -> Vector t -> t -}
+-- vplus :: (Num t) => Vector t -> Vector t -> Vector t
+-- vectMult :: (Num t) => Vector t -> t -> Vector t
+-- scalarMult :: (Num t) => Vector t -> Vector t -> t
 
 spec :: Spec
-spec = do
-    describe "Type parameters" $ do
-        it "can add two vectors together" $ do
-            pending
-            {- Vector 3 5 8 `vplus` Vector 9 2 8 -}
-                {- `shouldBe` Vector 12 7 16 -}
-        it "can add three vectors together" $ do
-            pending
-            {- Vector 3 5 8 `vplus` Vector 9 2 8 `vplus` Vector 0 2 3 -}
-                {- `shouldBe` Vector 12 9 19 -}
-        it "can multiply a vector with a scalar" $ do
-            pending
-            {- Vector 3 5 8 `vectMult` 10 -}
-                {- `shouldBe` Vector 30 50 80 -}
-        it "can multiply two vectors" $ do
-            pending
-            {- Vector 3 5 8 `scalarMult` Vector 2 3 4 -}
-                {- `shouldBe` 6+15+32 -}
+spec =
+  describe "Type parameters" $ do
+    it "can add two vectors together" $ do
+      pending
+      -- Vector 3 5 8 `vplus` Vector 9 2 8
+          -- `shouldBe` Vector 12 7 16
+    it "can add three vectors together" $ do
+      pending
+      -- Vector 3 5 8 `vplus` Vector 9 2 8 `vplus` Vector 0 2 3
+          -- `shouldBe` Vector 12 9 19
+    it "can multiply a vector with a scalar" $ do
+      pending
+      -- Vector 3 5 8 `vectMult` 10
+          -- `shouldBe` Vector 30 50 80
+    it "can multiply two vectors" $ do
+      pending
+      -- Vector 3 5 8 `scalarMult` Vector 2 3 4
+          -- `shouldBe` 6+15+32
