@@ -2,42 +2,33 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 62db39d4245b4399d4b06b0ee06127781490837b4edf64c4dbfb77909b27fe75
+-- hash: 90c1b8ec77b7ac262afe38b861b319e89da7910cb52c22864a56e6832458825a
 
-name:                katas
-version:             0.1.0.0
-homepage:            https://github.com/adomokos/hashmir#readme
-license-file:        LICENSE
-author:              Attila Domokos <adomokos@gmail.com>
-maintainer:          adomokos@gmail.com
-copyright:           2018 Attila Domokos
-category:            Console App
-build-type:          Simple
-cabal-version:       >= 1.10
+name:           katas
+version:        0.1.0.0
+category:       Console App
+homepage:       https://github.com/adomokos/hashmir#readme
+author:         Attila Domokos <adomokos@gmail.com>
+maintainer:     adomokos@gmail.com
+copyright:      2018 Attila Domokos
+license-file:   LICENSE
+build-type:     Simple
+cabal-version:  >= 1.10
 
 executable katas-exe
   main-is: Main.hs
+  other-modules:
+      Paths_katas
   hs-source-dirs:
       app/
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
-  other-modules:
-      Paths_katas
   default-language: Haskell2010
 
 test-suite katas-test
   type: exitcode-stdio-1.0
   main-is: Spec.hs
-  hs-source-dirs:
-      test/
-  build-depends:
-      QuickCheck
-    , base >=4.7 && <5
-    , bytestring
-    , containers
-    , hspec ==2.*
-    , mtl
   other-modules:
       Ex01_ListsExtractingSpec
       Ex02_ListsComprehensionsSpec
@@ -103,7 +94,16 @@ test-suite katas-test
       Ex62_MonadsLoggingWithWriterSpec
       Ex63_MonadsReaderSpec
       Ex64_MonadsReaderExampleSpec
-      Ex65_ExercisesBalancedBinaryTreeSpec
       Ex65_MonadsStatefulComputationsSpec
+      Ex66_ExercisesBalancedBinaryTreeSpec
       Paths_katas
+  hs-source-dirs:
+      test/
+  build-depends:
+      QuickCheck
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , hspec ==2.*
+    , mtl
   default-language: Haskell2010

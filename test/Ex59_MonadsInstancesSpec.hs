@@ -14,36 +14,37 @@ data MyMaybe a = MyNothing | MyJust a
 
 instance Functor MyMaybe where
     fmap :: (a -> b) -> MyMaybe a -> MyMaybe b
-    fmap = undefined
+    fmap _ MyNothing = MyNothing
+    fmap f (MyJust x) = MyJust (f x)
 
 instance Applicative MyMaybe where
-    pure = undefined
-    (<*>) = undefined
+    pure x = MyJust x
+    (<*>) _ MyNothing = MyNothing
+    (<*>) MyNothing _ = MyNothing
+    (MyJust x) <*> (MyJust y) = MyJust $ x y
 
 instance Monad MyMaybe where
-    return = undefined
-    (>>=) = undefined
+    return = pure
+    (>>=) MyNothing _ = MyNothing
+    (>>=) (MyJust x) f = f x
 
 spec :: Spec
 spec = do
     describe "Monad Examples" $ do
         it "works for Functor" $ do
-            pending
-            {- fmap (+2) MyNothing `shouldBe` MyNothing -}
-            {- fmap (+2) (MyJust 3) `shouldBe` MyJust 5 -}
+            fmap (+2) MyNothing `shouldBe` MyNothing
+            fmap (+2) (MyJust 3) `shouldBe` MyJust 5
         it "works for Applicative" $ do
-            pending
-            {- pure 2 `shouldBe` MyJust 2 -}
-            {- (+) <$> MyJust 2 <*> MyJust 5 -}
-                {- `shouldBe` MyJust 7 -}
-            {- MyJust (+2) <*> MyJust 5 -}
-                {- `shouldBe` MyJust 7 -}
+            pure 2 `shouldBe` MyJust 2
+            (+) <$> MyJust 2 <*> MyJust 5
+                `shouldBe` MyJust 7
+            MyJust (+2) <*> MyJust 5
+                `shouldBe` MyJust 7
         it "works for Monad" $ do
-            pending
-            {- return 2 `shouldBe` MyJust 2 -}
-            {- ((MyJust 10) >>= (\x -> (MyJust (x - 2)))) -}
-                {- `shouldBe` MyJust 8 -}
-            {- (MyNothing >>= (\x -> (MyJust (x - 2)))) -}
-                {- `shouldBe` MyNothing -}
-            {- ((MyJust 10) >>= \_ -> (MyNothing :: MyMaybe Int)) -}
-                {- `shouldBe` MyNothing -}
+            return 2 `shouldBe` MyJust 2
+            ((MyJust 10) >>= (\x -> (MyJust (x - 2))))
+                `shouldBe` MyJust 8
+            (MyNothing >>= (\x -> (MyJust (x - 2))))
+                `shouldBe` MyNothing
+            ((MyJust 10) >>= \_ -> (MyNothing :: MyMaybe Int))
+                `shouldBe` MyNothing

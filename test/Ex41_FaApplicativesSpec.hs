@@ -1,4 +1,6 @@
-module Ex41_FaApplicativesSpec (spec) where
+module Ex41_FaApplicativesSpec
+  ( spec
+  ) where
 
 import Test.Hspec
 import Test.QuickCheck
@@ -21,54 +23,39 @@ main = hspec spec
     (<$>) :: (Functor f) => (a -> b) -> f a -> f b
     f <$> x = fmap f x
 -}
-
 spec :: Spec
-spec = do
-    describe "Applicative" $ do
-        it "applies function inside the Just" $ do
-            pending
+spec =
+  describe "Applicative" $ do
+    it "applies function inside the Just" $
             -- Hint: use lambda expression
-            {- (fmap (___)) (fmap (*) (Just 3)) -}
-                {- `shouldBe` (Just 6) -}
-            {- ___ <$> ___ <*> Just 3 `shouldBe` Just 6 -}
-        it "applies function in list" $ do
-            pending
-            {- let a = fmap ___ ___ -}
-            {- fmap (\f -> f 9) a `shouldBe` [9,18,27,36] -}
-        it "works with Maybe" $ do
-            pending
-            {- ___ ___ <*> Just 9 -}
-                {- `shouldBe` Just 12 -}
-            {- pure (___) <*> Just ___ -}
-                {- `shouldBe` Just 13 -}
-            {- Just (++"hahah") <*> ___ -}
-                {- `shouldBe` Nothing -}
-            {- ___ <*> Just "woot" -}
-                {- `shouldBe` (Nothing :: Maybe String) -}
-        it "operates on several functors with a single function" $ do
-            pending
-            {- pure (___) <*> Just ___ <*> Just 5 -}
-                {- `shouldBe` Just 8 -}
-            {- pure (+) <*> Just ___ <*> ___ -}
-                {- `shouldBe` (Nothing :: Maybe Int) -}
-        it "can use <$> as fmap with an infix operator" $ do
-            pending
-            {- (___) <$> Just ___  <*> Just "volta" -}
-                {- `shouldBe` Just "johntravolta" -}
-            {- (___) "johntra" "" `shouldBe` "johntravolta" -}
-        it "works with a list of functions" $ do
-            pending
-            {- [___] <*> [1,2,3] -}
-                {- `shouldBe` [0,0,0,101,102,103,1,4,9] -}
-            {- [(_),(_)] <*> [1,2] <*> [3,4] -}
-                {- `shouldBe` [4,5,5,6,3,4,6,8] -}
-        it "can be used as a replacement for list comprehensions" $ do
-            pending
+     do
+      fmap ((\f -> f 2) . (*)) (Just 3) `shouldBe` Just 6
+      (*) <$> Just 2 <*> Just 3 `shouldBe` Just 6
+    it "applies function in list" $ do
+      let a = fmap (*) [1 .. 4]
+      fmap (\f -> f 9) a `shouldBe` [9, 18, 27, 36]
+    it "works with Maybe" $ do
+      Just (+ 3) <*> Just 9 `shouldBe` Just 12
+      pure (+ 3) <*> Just 10 `shouldBe` Just 13
+      Just (++ "hahah") <*> Nothing `shouldBe` Nothing
+      Nothing <*> Just "woot" `shouldBe` (Nothing :: Maybe String)
+    it "operates on several functors with a single function" $ do
+      pure (+) <*> Just 3 <*> Just 5 `shouldBe` Just 8
+      pure (+) <*> Just 3 <*> Nothing `shouldBe` (Nothing :: Maybe Int)
+    it "can use <$> as fmap with an infix operator" $ do
+      (++) <$> Just "johntra" <*> Just "volta" `shouldBe` Just "johntravolta"
+      (++) "johntra" "volta" `shouldBe` "johntravolta"
+    it "works with a list of functions" $ do
+      [(* 0), (+ 100), (^ 2)] <*>
+        [1, 2, 3] `shouldBe` [0, 0, 0, 101, 102, 103, 1, 4, 9]
+      [(+), (*)] <*> [1, 2] <*> [3, 4] `shouldBe` [4, 5, 5, 6, 3, 4, 6, 8]
+    it "can be used as a replacement for list comprehensions" $
             {- example...
             [x*y | x <- [2,5,10], y <- [8,10,11]]
                 `shouldBe` [16,20,22,40,50,55,80,100,110] -}
-            {- (___) <$> [___] <*> [___] -}
-                {- `shouldBe` [16,20,22,40,50,55,80,100,110] -}
+     do
+      (*) <$> [2, 5, 10] <*>
+        [8, 10, 11] `shouldBe` [16, 20, 22, 40, 50, 55, 80, 100, 110]
             -- Keep only the values that are greater than 50 of the product
-            {- (filter (___) $ (___) <$> [2,5,10] <*> [8,10,11]) -}
-                {- `shouldBe` [55,80,100,110] -}
+      filter (> 50) ((*) <$> [2, 5, 10] <*> [8, 10, 11]) `shouldBe`
+        [55, 80, 100, 110]

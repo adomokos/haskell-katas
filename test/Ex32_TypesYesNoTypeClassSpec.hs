@@ -1,4 +1,6 @@
-module Ex32_TypesYesNoTypeClassSpec (spec) where
+module Ex32_TypesYesNoTypeClassSpec
+  ( spec
+  ) where
 
 import Test.Hspec
 import Test.QuickCheck
@@ -10,45 +12,63 @@ main = hspec spec
     Simulate the JavaScript behavior,
     where if (0) or if ("") if ("WHAT") works.
 -}
-
 {- Define a YesNo type class
    that returns boolean value based on type -}
+class YesNo a where
+  yesno :: a -> Bool
 
-{- Define some instances -}
-{- For Int -}
+-- For Bool
+instance YesNo Bool where
+  yesno False = False
+  yesno True = True
 
-{- For Lists -}
+-- Define some instances
+-- For Int
+instance YesNo Int where
+  yesno 0 = False
+  yesno _ = True
 
-{- For Bool -}
+-- For Lists
+instance YesNo [a] where
+  yesno [] = False
+  yesno _ = True
 
-{- For Maybe -}
+-- For Maybe
+instance YesNo (Maybe a) where
+  yesno Nothing = False
+  yesno _ = True
 
-data TrafficLight = Red | Yellow | Green deriving (Eq)
+data TrafficLight
+  = Red
+  | Yellow
+  | Green
+  deriving (Eq)
 
-{- Create derivied instance of YesNo for TrafficLight -}
+instance YesNo TrafficLight where
+  yesno Green = True
+  yesno _ = False
 
-{- yesnoIf :: (YesNo y) => y -> a -> a -> a -}
+-- Create derivied instance of YesNo for TrafficLight
+yesnoIf :: (YesNo y) => y -> a -> a -> a
+yesnoIf condition trueValue falseValue =
+  if yesno condition
+    then trueValue
+    else falseValue
 
 spec :: Spec
-spec = do
-    describe "Yes/No typeclass" $ do
-        it "works with Bool fields" $ do
-            pending
-            {- yesno False `shouldBe` False -}
-        it "works with Ints" $ do
-            pending
-            {- yesno (0 :: Int) `shouldBe` False -}
-            {- yesno (1 :: Int) `shouldBe` True -}
-        it "works with Lists" $ do
-            pending
-            {- yesno [] `shouldBe` False -}
-            {- yesno [3,4] `shouldBe` True -}
-        it "works the type TrafficLight" $ do
-            pending
-            {- yesno Red `shouldBe` False -}
-            {- yesno Green `shouldBe` True -}
-        it "can do a conditional with yesno" $ do
-            pending
-            {- yesnoIf Red "true" "false" `shouldBe` "false" -}
-            {- yesnoIf [] 1 2 `shouldBe` 2 -}
-            {- yesnoIf (Just 500) "YEAH!" "NO" `shouldBe` "YEAH!" -}
+spec =
+  describe "Yes/No typeclass" $ do
+    it "works with Bool fields" $ yesno False `shouldBe` False
+    it "works with Ints" $ do
+      yesno (0 :: Int) `shouldBe` False
+      yesno (1 :: Int) `shouldBe` True
+    it "works with Lists" $ do
+      yesno [] `shouldBe` False
+      yesno [3, 4] `shouldBe` True
+    it "works the type TrafficLight" $ do
+      yesno Red `shouldBe` False
+      yesno Green `shouldBe` True
+    it "can do a conditional with yesno" $ do
+      yesnoIf Red "true" "false" `shouldBe` "false"
+      yesnoIf [] 1 2 `shouldBe` 2
+      yesnoIf (Just 500) "YEAH!" "NO" `shouldBe` "YEAH!"

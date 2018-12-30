@@ -1,9 +1,11 @@
-module Ex65_MonadsStatefulComputationsSpec (spec) where
+module Ex65_MonadsStatefulComputationsSpec
+  ( spec
+  ) where
 
-import Test.Hspec
-import Test.QuickCheck
 import Control.Exception (evaluate)
 import Control.Monad.State
+import Test.Hspec
+import Test.QuickCheck
 
 main :: IO ()
 main = hspec spec
@@ -11,13 +13,16 @@ main = hspec spec
 type Stack = [Int]
 
 pop :: Stack -> (Int, Stack)
-pop (x:xs) = undefined
+pop (x:xs) = (x, xs)
 
 push :: Int -> Stack -> ((), Stack)
-push a xs = undefined
+push a xs = ((), a : xs)
 
 stackManip :: Stack -> (Int, Stack)
-stackManip stack = undefined
+stackManip stack =
+  let ((), newStack1) = push 3 stack
+      (a, newStack2) = pop newStack1
+   in pop newStack2
 
 {-
     Managing the state by ourselves is tedious.
@@ -38,40 +43,44 @@ stackManip stack = undefined
                                             (State g) = f a
                                         in g newState
 -}
-
 pop' :: State Stack Int
-pop' = undefined
+pop' = state $ \(x:xs) -> (x, xs)
 
 push' :: Int -> State Stack ()
-push' _ = undefined
+push' a = state $ \xs -> ((), a : xs)
 
 stackManip' :: State Stack Int
-{- stackManip' = do -}
     {- push' 3 -}
     {- pop' -}
     {- pop' -}
-stackManip' = undefined
-
+{- stackManip' = do -}
+stackManip' = return [] >> push' 3 >> pop' >> pop'
 
 stackStuff :: State Stack ()
-stackStuff = undefined
+stackStuff = do
+  a <- pop'
+  if a == 5
+    then push' 5
+    else do
+      push' 3
+      push' 8
 
 moreStack :: State Stack ()
-moreStack = undefined
+moreStack = do
+  a <- stackManip'
+  if a == 100
+    then stackStuff
+    else return ()
 
 spec :: Spec
 spec =
-    describe "Stateful Computations" $ do
-        it "can operate on a stack" $
-            pending
-            {- stackManip [5,8,2,1] `shouldBe` (5,[8,2,1]) -}
-        it "can operate with State on stack" $
-            pending
-            {- runState stackManip' [5,8,2,1] `shouldBe` (5,[8,2,1]) -}
-        it "can run conditional logic with Monads"$ do
-            pending
-            {- runState stackStuff [9,0,2,1,0] `shouldBe` ((),[8,3,0,2,1,0]) -}
-            {- runState stackStuff [5,0,2,1,0] `shouldBe` ((),[5,0,2,1,0]) -}
-        it "can weave other functions with State" $
-            pending
-            {- runState moreStack [5,8,2,1] `shouldBe` ((),[8,2,1]) -}
+  describe "Stateful Computations" $ do
+    it "can operate on a stack" $
+      stackManip [5, 8, 2, 1] `shouldBe` (5, [8, 2, 1])
+    it "can operate with State on stack" $
+      runState stackManip' [5, 8, 2, 1] `shouldBe` (5, [8, 2, 1])
+    it "can run conditional logic with Monads" $ do
+      runState stackStuff [9, 0, 2, 1, 0] `shouldBe` ((), [8, 3, 0, 2, 1, 0])
+      runState stackStuff [5, 0, 2, 1, 0] `shouldBe` ((), [5, 0, 2, 1, 0])
+    it "can weave other functions with State" $
+      runState moreStack [5, 8, 2, 1] `shouldBe` ((), [8, 2, 1])

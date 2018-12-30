@@ -1,8 +1,10 @@
-module Ex44_FaMonoidsSpec (spec) where
+module Ex44_FaMonoidsSpec
+  ( spec
+  ) where
 
+import Data.Monoid
 import Test.Hspec
 import Test.QuickCheck
-import Data.Monoid
 
 main :: IO ()
 main = hspec spec
@@ -28,38 +30,25 @@ main = hspec spec
 
     For product and sum Data.Monoid exposes Product and Sum
 -}
-
 spec :: Spec
-spec = do
-    describe "Monoids" $ do
-        it "defines mappend and mempty" $ do
-            pending
-            {- [1,2,3] ___ [4,5,6] -}
-                {- `shouldBe` [1,2,3,4,5,6] -}
-            {- ("one" ___ "two") ___ "tree" -}
-                {- `shouldBe` "onetwotree" -}
-            {- "one" ___ ("two" ___ "tree") -}
-                {- `shouldBe` "onetwotree" -}
-            {- "one" ___ "two" `mappend` ___ -}
-                {- `shouldBe` "onetwotree" -}
-            {- "pang" `mappend` mempty `shouldBe` "pang" -}
-            {- ___ [[1,2],[3,6],[9]] -}
-                {- `shouldBe` [1,2,3,6,9] -}
-            {- (___ :: [Int]) `shouldBe` [] -}
-        it "defines Product" $ do
-            pending
-            {- (___ $ ___ 3 `mappend` Product 9) -}
-                {- `shouldBe` 27 -}
-            {- (getProduct $ Product 3 `mappend` ___) -}
-                {- `shouldBe` 3 -}
-            {- (___ . ___ . ___ Product $ [3,4,2]) -}
-                {- `shouldBe` 24 -}
-        it "and Sum newtypes" $ do
-            pending
-            {- (___ $ ___ 2 `mappend` ___ 9) `shouldBe` 11 -}
-            {- (___ $ ___ `mappend` Sum 3) `shouldBe` 3 -}
-            {- (___ . ___ . ___ Sum $ [1,2,3]) `shouldBe` 6 -}
-        it "has Any and All" $ do
-            pending
-            {- (___ $ Any ___ `mappend` ___ False) `shouldBe` True -}
-            {- (getAll $ mempty `mappend` ___ ___) `shouldBe` True -}
+spec =
+  describe "Monoids" $ do
+    it "defines mappend and mempty" $ do
+      [1, 2, 3] `mappend` [4, 5, 6] `shouldBe` [1, 2, 3, 4, 5, 6]
+      ("one" `mappend` "two") `mappend` "tree" `shouldBe` "onetwotree"
+      "one" `mappend` ("two" `mappend` "tree") `shouldBe` "onetwotree"
+      "one" `mappend` "two" `mappend` "tree" `shouldBe` "onetwotree"
+      "pang" `mappend` mempty `shouldBe` "pang"
+      mconcat [[1, 2], [3, 6], [9]] `shouldBe` [1, 2, 3, 6, 9]
+      (mempty :: [Int]) `shouldBe` []
+    it "defines Product" $ do
+      getProduct (Product 3 `mappend` Product 9) `shouldBe` 27
+      getProduct (Product 3 `mappend` mempty) `shouldBe` 3
+      (getProduct . mconcat . map Product $ [3, 4, 2]) `shouldBe` 24
+    it "and Sum newtypes" $ do
+      getSum (Sum 2 `mappend` Sum 9) `shouldBe` 11
+      getSum (mempty `mappend` Sum 3) `shouldBe` 3
+      getSum (mconcat . map Sum $ [1, 2, 3]) `shouldBe` 6
+    it "has Any and All" $ do
+      getAny (Any True `mappend` Any False) `shouldBe` True
+      getAll (mempty `mappend` All True) `shouldBe` True
