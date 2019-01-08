@@ -3,7 +3,6 @@ module Ex64_MonadsReaderExampleSpec
   ) where
 
 import Test.Hspec
-import Test.QuickCheck
 
 -- https://blog.ssanj.net/posts/2014-09-23-A-Simple-Reader-Monad-Example.html
 import Control.Monad.Reader

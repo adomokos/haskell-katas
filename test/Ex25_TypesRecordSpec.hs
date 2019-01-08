@@ -3,7 +3,6 @@ module Ex25_TypesRecordSpec
   ) where
 
 import Test.Hspec
-import Test.QuickCheck
 
 main :: IO ()
 main = hspec spec

@@ -4,7 +4,6 @@ module Ex58_MonadsMonadLawsSpec
 
 import Control.Monad
 import Test.Hspec
-import Test.QuickCheck
 
 main :: IO ()
 main = hspec spec

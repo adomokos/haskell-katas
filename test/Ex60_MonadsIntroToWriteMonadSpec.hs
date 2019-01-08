@@ -7,7 +7,6 @@ import qualified Data.ByteString as B
 import qualified Data.ByteString.Char8 as B8
 import Data.Monoid
 import Test.Hspec
-import Test.QuickCheck
 
 main :: IO ()
 main = hspec spec

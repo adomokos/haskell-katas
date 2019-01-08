@@ -3,7 +3,6 @@ module Ex11_FlowRecursionsSpec
   ) where
 
 import Test.Hspec
-import Test.QuickCheck
 
 main :: IO ()
 main = hspec spec

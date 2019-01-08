@@ -5,7 +5,6 @@ module Ex57_ExercisesKnightsQuestSpec
 import Control.Exception (evaluate)
 import Control.Monad
 import Test.Hspec
-import Test.QuickCheck
 
 main :: IO ()
 main = hspec spec

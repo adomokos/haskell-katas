@@ -3,7 +3,6 @@ module Ex43_FaNewTypeSpec
   ) where
 
 import Test.Hspec
-import Test.QuickCheck
 
 main :: IO ()
 main = hspec spec

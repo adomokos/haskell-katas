@@ -3,7 +3,6 @@ module Ex05_TypesIntroSpec
   ) where
 
 import Test.Hspec
-import Test.QuickCheck
 
 main :: IO ()
 main = hspec spec

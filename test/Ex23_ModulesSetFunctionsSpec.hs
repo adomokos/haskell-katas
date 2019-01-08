@@ -4,7 +4,6 @@ module Ex23_ModulesSetFunctionsSpec
 
 import qualified Data.Set as Set
 import Test.Hspec
-import Test.QuickCheck
 
 main :: IO ()
 main = hspec spec

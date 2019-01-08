@@ -3,7 +3,6 @@ module Ex15_HofsScansSpec
   ) where
 
 import Test.Hspec
-import Test.QuickCheck
 
 main :: IO ()
 main = hspec spec

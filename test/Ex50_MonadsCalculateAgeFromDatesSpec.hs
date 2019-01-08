@@ -5,7 +5,6 @@ module Ex50_MonadsCalculateAgeFromDatesSpec
 -- From: http://www.snoyman.com/blog/2017/01/functors-applicatives-and-monads
 -- 6. Using the short-hand <$>
 import Test.Hspec
-import Test.QuickCheck
 import Text.Read (readMaybe)
 
 main :: IO ()

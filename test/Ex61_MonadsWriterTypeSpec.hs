@@ -5,7 +5,6 @@ module Ex61_MonadsWriterTypeSpec
 import Control.Monad.Writer
 import Data.Monoid
 import Test.Hspec
-import Test.QuickCheck
 
 main :: IO ()
 main = hspec spec

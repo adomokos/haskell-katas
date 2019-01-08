@@ -4,7 +4,6 @@ module Ex29_TypesAliasingSpec
 
 import qualified Data.Map as Map
 import Test.Hspec
-import Test.QuickCheck
 
 main :: IO ()
 main = hspec spec

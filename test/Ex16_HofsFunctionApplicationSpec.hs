@@ -3,7 +3,6 @@ module Ex16_HofsFunctionApplicationSpec
   ) where
 
 import Test.Hspec
-import Test.QuickCheck
 
 main :: IO ()
 main = hspec spec
