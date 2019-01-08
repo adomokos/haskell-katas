@@ -1,7 +1,6 @@
 module Ex60_MonadsIntroToWriteMonadSpec (spec) where
 
 import Test.Hspec
-import Test.QuickCheck
 import Control.Monad
 import Data.Monoid
 import qualified Data.ByteString as B

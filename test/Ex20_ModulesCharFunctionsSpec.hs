@@ -6,7 +6,6 @@ import qualified Data.Char as C
 import Data.Function
 import qualified Data.List as L
 import Test.Hspec
-import Test.QuickCheck
 
 main :: IO ()
 main = hspec spec

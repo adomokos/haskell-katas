@@ -3,7 +3,6 @@ module Ex28_TypesMoreDerivedInstancesSpec
   ) where
 
 import Test.Hspec
-import Test.QuickCheck
 
 main :: IO ()
 main = hspec spec

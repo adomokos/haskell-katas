@@ -3,7 +3,6 @@ module Ex21_ModulesMapFunctionalitySpec
   ) where
 
 import Test.Hspec
-import Test.QuickCheck
 
 main :: IO ()
 main = hspec spec

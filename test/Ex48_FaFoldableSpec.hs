@@ -5,7 +5,6 @@ module Ex48_FaFoldableSpec
 import qualified Data.Foldable as F
 import Data.Monoid
 import Test.Hspec
-import Test.QuickCheck
 
 main :: IO ()
 main = hspec spec

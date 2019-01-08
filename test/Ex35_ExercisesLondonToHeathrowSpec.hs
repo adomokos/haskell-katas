@@ -4,7 +4,6 @@ module Ex35_ExercisesLondonToHeathrowSpec
 
 import Control.Exception (evaluate)
 import Test.Hspec
-import Test.QuickCheck
 
 main :: IO ()
 main = hspec spec

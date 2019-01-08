@@ -3,7 +3,6 @@ module Ex54_MonadsBirdLandingWithDoNotationSpec
   ) where
 
 import Test.Hspec
-import Test.QuickCheck
 
 type Birds = Int
 

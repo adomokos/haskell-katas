@@ -5,7 +5,6 @@ module Ex22_ModulesMapFunctionsSpec
 import Data.Char
 import qualified Data.Map as Map
 import Test.Hspec
-import Test.QuickCheck
 
 main :: IO ()
 main = hspec spec

@@ -3,7 +3,6 @@ module Ex30_TypesRecursiveDataStructuresSpec
   ) where
 
 import Test.Hspec
-import Test.QuickCheck
 
 main :: IO ()
 main = hspec spec

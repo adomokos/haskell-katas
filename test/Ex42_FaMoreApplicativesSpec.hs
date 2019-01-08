@@ -4,7 +4,6 @@ module Ex42_FaMoreApplicativesSpec
 
 import Control.Applicative
 import Test.Hspec
-import Test.QuickCheck
 
 main :: IO ()
 main = hspec spec

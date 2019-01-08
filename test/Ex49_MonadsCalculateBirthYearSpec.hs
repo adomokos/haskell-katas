@@ -3,7 +3,6 @@ module Ex49_MonadsCalculateBirthYearSpec
   ) where
 
 import Test.Hspec
-import Test.QuickCheck
 import Text.Read (readMaybe)
 
 {-

@@ -5,7 +5,6 @@ module Ex18_ModulesIntroSpec
 import Data.List
 import qualified Data.Set as M {- use M.filter now -}
 import Test.Hspec
-import Test.QuickCheck
 
 main :: IO ()
 main = hspec spec

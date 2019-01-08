@@ -4,7 +4,6 @@ module Ex39_FaFmapReplicateSpec
 
 import Data.Either
 import Test.Hspec
-import Test.QuickCheck
 
 main :: IO ()
 main = hspec spec

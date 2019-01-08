@@ -5,7 +5,6 @@ module Ex65_MonadsStatefulComputationsSpec
 import Control.Exception (evaluate)
 import Control.Monad.State
 import Test.Hspec
-import Test.QuickCheck
 
 main :: IO ()
 main = hspec spec
