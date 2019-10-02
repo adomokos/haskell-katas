@@ -1,23 +1,24 @@
-THIS_FILE := $(lastword $(MAKEFILE_LIST))
-mkfile_path := $(abspath $(lastword $(MAKEFILE_LIST)))
-current_dir := $(notdir $(patsubst %/,%,$(dir $(mkfile_path))))
+APP_NAME := "katas"
 
 .DEFAULT_GOAL := help
 
-run: ## Runs the app
-	time ~/.local/bin/katas-exe
+build: ## Builds with Stack
+	@stack build --fast
+
+run: build ## Runs the app
+	@stack exec -- $(APP_NAME)-exe -v
 .PHONY: run
 
-test: ## Run the specs
-	time stack --no-terminal test --test-arguments=--format=progress
+test: ## Runs the specs
+	stack build --fast --test --test-arguments=--format=progress -j4
 .PHONY: test
 
-repl: ## Run a REPL for development
-	stack ghci :$(current_dir)-exe
+repl: ## Runs REPL for development
+	stack ghci :$(APP_NAME)-exe
 .PHONY: repl
 
-repl-test: ## Run a REPL with tests
-	stack ghci :$(current_dir)-test
+repl-test: ## Runs a REPL with tests
+	stack ghci :$(APP_NAME)-test
 .PHONY: repl-test
 
 help: ## Prints this help command
