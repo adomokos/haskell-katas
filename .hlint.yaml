@@ -1,4 +1,8 @@
 ---
 - ignore:
-    name: Redundant do
+  - name: Redundant do
+    within: spec
+    # Some of the test examples have to be completed by a developer. If I remove the brackets, it might
+    # make hlint happy, but it would be more work on the developer's part.
+  - name: Redundant bracket
     within: spec
