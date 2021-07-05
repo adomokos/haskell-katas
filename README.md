@@ -1,6 +1,6 @@
 # Haskell Katas
 
-[![Build Status](https://travis-ci.org/adomokos/haskell-katas.svg)](http://travis-ci.org/adomokos/haskell-katas)
+[![Build Status](https://github.com/adomokos/haskell-katas/actions/workflows/project-build.yml/badge.svg)](https://github.com/adomokos/haskell-katas/actions/workflows/project-build.yml)
 
 As I tried to learn Haskell, I realized reading and following examples in ghci is not enough, I needed short examples I could practice daily.
 
