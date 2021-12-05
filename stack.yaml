@@ -56,7 +56,7 @@ packages:
 #
 # Override the architecture used by stack, especially useful on Windows
 # arch: i386
-arch: x86_64
+# arch: x86_64
 # arch: aarch64
 #
 # Extra directories used by stack for building
