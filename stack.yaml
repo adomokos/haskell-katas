@@ -15,7 +15,7 @@
 # resolver:
 #  name: custom-snapshot
 #  location: "./custom-snapshot.yaml"
-resolver: lts-18.0
+resolver: lts-18.18
 
 # User packages to be built.
 # Various formats can be used as shown in the example below.
@@ -56,7 +56,8 @@ packages:
 #
 # Override the architecture used by stack, especially useful on Windows
 # arch: i386
-# arch: x86_64
+arch: x86_64
+ # arch: aarch64
 #
 # Extra directories used by stack for building
 # extra-include-dirs: [/path/to/dir]
