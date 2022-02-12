@@ -1,9 +1,12 @@
-APP_NAME := "katas"
+APP_NAME := katas
 
 .DEFAULT_GOAL := help
 
 build: ## Builds with Stack
-	@stack build --fast
+	stack build --fast
+
+clean: ## Cleans the project with stack
+	stack clean
 
 run: build ## Runs the app
 	@stack exec -- $(APP_NAME)-exe -v
