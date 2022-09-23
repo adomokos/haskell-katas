@@ -12,8 +12,8 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        stack: ["2.7.3"]
-        ghc: ["8.10.7"]
+        stack: ["2.7.5"]
+        ghc: ["9.0.2"]
 
     steps:
     - uses: actions/checkout@v2
@@ -33,12 +33,12 @@ jobs:
 
     - name: Install dependencies
       run: |
-        stack build --system-ghc --test --bench --no-run-tests --no-run-benchmarks --only-dependencies
+        stack build --system-ghc --test --bench --no-run-tests --no-run-benchmarks --only-dependencies --arch x86_64
 
     - name: Build
       run: |
-        stack build --system-ghc --test --bench --no-run-tests --no-run-benchmarks
+        stack build --system-ghc --test --bench --no-run-tests --no-run-benchmarks --arch x86_64
 
     - name: Test
       run: |
-        stack test --system-ghc
+        stack test --system-ghc --test-arguments=--format=progress --arch x86_64
