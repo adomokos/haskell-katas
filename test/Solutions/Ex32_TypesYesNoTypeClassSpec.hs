@@ -3,7 +3,6 @@ module Solutions.Ex32_TypesYesNoTypeClassSpec
   ) where
 
 import Test.Hspec
-import Test.QuickCheck
 
 main :: IO ()
 main = hspec spec

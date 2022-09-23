@@ -4,7 +4,6 @@ module Solutions.Ex28_TypesMoreDerivedInstancesSpec
 
 import Control.Exception (evaluate)
 import Test.Hspec
-import Test.QuickCheck
 
 main :: IO ()
 main = hspec spec
